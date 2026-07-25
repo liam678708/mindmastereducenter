@@ -1,136 +1,96 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import program1 from '../assets/images/program1.png';
-import program2 from '../assets/images/program2.webp';
 
 const programs = [
   {
-    id: 'after-school',
-    badge: 'After School',
+    id: 'math-science',
+    badge: 'Core Program',
     badgeBg: 'bg-[#e8f4ff]',
     badgeText: 'text-[#1a84d2]',
     badgeBorder: 'border-[#1a84d2]',
     accentColor: '#1a84d2',
     accentBg: '#e8f4ff',
-    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80',
-    imageAlt: 'After School Program',
-    icon: 'local_library',
+    icon: 'calculate',
     iconBg: 'bg-[#e8f4ff]',
     iconColor: 'text-[#1a84d2]',
-    title: 'After School Program',
-    subtitle: 'Grades 4-12',
-    overview: 'Sunshine Program (Grades 4-8), Freshman/Sophomore Math & Science (Grades 8-10), and Junior/Senior Math & Science (Grades 11-12) to support academic growth.',
+    title: 'School Success Program',
+    subtitle: 'Mathematics & Science — Grades 4-12',
+    overview: 'Sunshine Program (Grades 4-8), Freshman/Sophomore Math & Science (Grades 8-10), and Junior/Senior Math & Science (Grades 11-12). Saskatchewan Curriculum aligned with small-group, personalized instruction.',
     details: [
-      { icon: 'school', label: 'Grades', value: 'Grade 4 - Grade 12' },
-      { icon: 'payments', label: 'Fees', value: 'Contact for pricing' },
-      { icon: 'schedule', label: 'Schedule', value: 'Weekdays · After school hours' },
-      { icon: 'location_on', label: 'Location', value: 'Mind Masters Edu Center' },
+      { icon: 'school', label: 'Grades', value: 'Grade 4 – Grade 12' },
+      { icon: 'payments', label: 'Pricing', value: '$35/hr or $150/mo (8 sessions)' },
+      { icon: 'schedule', label: 'Schedule', value: 'On-demand & structured batches' },
+      { icon: 'videocam', label: 'Format', value: 'In-person & Zoom available' },
     ],
     features: [
       'Sunshine Program (Grades 4-8)',
       'Freshman/Sophomore Math & Science',
       'Junior/Senior Math & Science',
-      'Curriculum-aligned support',
+      'Intake assessment to evaluate academic level',
     ],
-    cta: 'Register Now',
+    cta: 'Explore Program',
     contact: 'Contact us to enroll',
   },
   {
     id: 'university-support',
-    badge: 'University Support',
+    badge: 'Advanced',
     badgeBg: 'bg-[#fffbe8]',
     badgeText: 'text-[#6a5b00]',
     badgeBorder: 'border-[#fde68a]',
     accentColor: '#6a5b00',
     accentBg: '#fffbe8',
-    image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80',
-    imageAlt: 'University Support',
     icon: 'account_balance',
     iconBg: 'bg-[#fffbe8]',
     iconColor: 'text-[#6a5b00]',
-    title: 'University Support',
-    subtitle: 'Admission & Tutoring',
-    overview: 'Comprehensive University-Level Tutoring, Top 10 Canadian Universities Admission Preparation, IELTS Preparation, and On-Demand Hourly Tutoring to help you succeed in higher education.',
+    title: 'University Prep & Tutoring',
+    subtitle: 'Undergraduate STEM & Admission Prep',
+    overview: 'University-level tutoring in Calculus, Linear Algebra, Statistics, Physics, Chemistry, and Biology. Plus Top 10 Canadian Universities admission preparation with dedicated mentorship and application guidance.',
     details: [
       { icon: 'school', label: 'Level', value: 'Pre-University & University' },
-      { icon: 'payments', label: 'Fees', value: 'Contact for pricing' },
+      { icon: 'payments', label: 'Pricing', value: '$35/hr or $150/mo (8 sessions)' },
       { icon: 'schedule', label: 'Schedule', value: 'Flexible scheduling' },
-      { icon: 'location_on', label: 'Location', value: 'Mind Masters Edu Center & Online' },
+      { icon: 'videocam', label: 'Format', value: 'In-person & Zoom available' },
     ],
     features: [
-      'University-Level Tutoring',
-      'Top 10 Admission Prep',
-      'IELTS Preparation',
-      'On-Demand Hourly Tutoring',
+      'Calculus, Linear Algebra, Statistics',
+      'Physics, Chemistry, Biology',
+      'Top 10 Canadian University Prep',
+      'Exam-focused strategies & guided practice',
     ],
-    cta: 'Register Now',
+    cta: 'Explore Program',
     contact: 'Contact us to enroll',
   },
   {
-    id: 'krazy-math',
-    badge: 'After School Club',
+    id: 'esl-ielts',
+    badge: 'Language',
     badgeBg: 'bg-[#f5e8ff]',
     badgeText: 'text-[#8126cf]',
     badgeBorder: 'border-[#c4b5fd]',
     accentColor: '#8126cf',
     accentBg: '#f5e8ff',
-    image: program1,
-    imageAlt: 'Krazy Math Tutorial students',
-    icon: 'calculate',
+    icon: 'translate',
     iconBg: 'bg-[#f5e8ff]',
     iconColor: 'text-[#8126cf]',
-    title: 'Krazy Math Tutorial',
-    subtitle: 'Advanced After School Program',
-    overview: 'An advanced math-focused after-school program aligned with the Saskatchewan School Board curriculum — designed to challenge and inspire students from Grade 2 through Grade 12.',
+    title: 'ESL & IELTS Preparation',
+    subtitle: 'English Language & Exam Preparation',
+    overview: 'ESL studies for newcomers and comprehensive IELTS exam preparation covering all four components: Reading, Writing, Listening, and Speaking. Personalized feedback, speaking practice, and authentic study materials.',
     details: [
-      { icon: 'school',       label: 'Grades',   value: 'Grade 2 – Grade 12' },
-      { icon: 'payments',     label: 'Fees',     value: 'Gr 2–7: $120/mo · Gr 8–12: $150/mo' },
-      { icon: 'schedule',     label: 'Schedule', value: 'Mon, Tue, Thu · 6:30 – 8:30 PM' },
-      { icon: 'location_on',  label: 'Location', value: '1876 Wallace St, Regina, SK S4P 0H4' },
+      { icon: 'translate', label: 'Level', value: 'All levels welcome' },
+      { icon: 'payments', label: 'Pricing', value: 'Contact for pricing' },
+      { icon: 'schedule', label: 'Schedule', value: 'Flexible scheduling' },
+      { icon: 'videocam', label: 'Format', value: 'In-person & Zoom available' },
     ],
     features: [
-      'Advanced-level math instruction',
-      'Saskatchewan curriculum-aligned',
-      'Grades 2 through 12',
-      '$50 sibling discount',
+      'Reading, Writing, Listening, Speaking',
+      'Interactive lessons & practical exercises',
+      'Pronunciation & fluency coaching',
+      'Printed study materials & audio resources',
     ],
-    cta: 'Register Now',
-    contact: '+1 (306) 515-3614',
-  },
-  {
-    id: 'preschool',
-    badge: 'Preschool & After School',
-    badgeBg: 'bg-[#e8f4ff]',
-    badgeText: 'text-[#1a84d2]',
-    badgeBorder: 'border-[#1a84d2]',
-    accentColor: '#1a84d2',
-    accentBg: '#e8f4ff',
-    image: program2,
-    imageAlt: 'Preschool program at Darul Falah Islamic Centre',
-    icon: 'child_care',
-    iconBg: 'bg-[#e8f4ff]',
-    iconColor: 'text-[#1a84d2]',
-    title: 'Preschool Program',
-    subtitle: 'Darul Falah Islamic Centre',
-    overview: 'A nurturing preschool and after-school program focused on learning through play, creativity, and foundational skills — enriched with Islamic values to build strong character from the very beginning.',
-    details: [
-      { icon: 'child_care',  label: 'Age Group', value: '3 – 5 Years' },
-      { icon: 'payments',    label: 'Fees',      value: '$200 / month' },
-      { icon: 'schedule',    label: 'Schedule',  value: 'Mon – Fri · 9:00 AM – 12:00 PM' },
-      { icon: 'mosque',      label: 'Centre',    value: 'Darul Falah Islamic Centre' },
-    ],
-    features: [
-      'Learning through play & creativity',
-      'Foundational literacy & numeracy',
-      'Islamic values & character building',
-      'Safe & nurturing environment',
-    ],
-    cta: 'Register Now',
-    contact: 'Contact for details',
+    cta: 'Explore Program',
+    contact: 'Contact us to enroll',
   },
 ];
 
@@ -190,7 +150,7 @@ export default function FeaturedPrograms() {
               className="text-lg font-bold text-[#5b5b5b] max-w-sm leading-relaxed"
               style={{ fontFamily: 'var(--font-manrope)' }}
             >
-              Carefully designed programs that blend structured learning with real-world skills.
+              Top-quality, affordable tutoring programs customized to each learner&apos;s strengths — in-person or via Zoom.
             </p>
             {/* Navigation Controls */}
             <div className="flex gap-3 mt-auto">
@@ -225,29 +185,41 @@ export default function FeaturedPrograms() {
                 key={prog.title}
                 className="w-[calc(100%-0.5rem)] lg:w-[calc(50%-1.25rem)] flex-shrink-0 bg-white border-4 border-black rounded-2xl overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col"
               >
-                {/* Image */}
-                <div className="relative h-56 border-b-4 border-black overflow-hidden flex-shrink-0">
-                  <Image
-                    src={prog.image}
-                    alt={prog.imageAlt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  <div className="absolute top-4 left-4">
+                {/* Colored banner */}
+                <div
+                  className="px-6 py-6 flex items-center gap-4 border-b-4 border-black flex-shrink-0"
+                  style={{ backgroundColor: prog.accentBg }}
+                >
+                  <div
+                    className="w-14 h-14 border-2 border-black rounded-xl flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: prog.accentColor }}
+                  >
                     <span
-                      className={`inline-flex items-center gap-1.5 ${prog.badgeBg} ${prog.badgeText} border-2 ${prog.badgeBorder} font-black text-xs uppercase tracking-wide px-3 py-1.5 rounded-lg shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]`}
+                      className="material-symbols-outlined text-3xl text-white"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                    >
+                      {prog.icon}
+                    </span>
+                  </div>
+                  <div className="min-w-0">
+                    <span
+                      className={`inline-flex items-center gap-1.5 ${prog.badgeBg} ${prog.badgeText} border-2 ${prog.badgeBorder} font-black text-xs uppercase tracking-wide px-2 py-1 rounded-lg mb-1`}
                       style={{ fontFamily: 'var(--font-space-grotesk)' }}
                     >
-                      <span
-                        className={`material-symbols-outlined text-base ${prog.iconColor}`}
-                        style={{ fontVariationSettings: "'FILL' 1" }}
-                      >
-                        {prog.icon}
-                      </span>
                       {prog.badge}
                     </span>
+                    <h3
+                      className="text-xl md:text-2xl font-black text-[#1a1a1a] leading-tight"
+                      style={{ fontFamily: 'var(--font-space-grotesk)' }}
+                    >
+                      {prog.title}
+                    </h3>
+                    <p
+                      className="font-bold text-xs uppercase tracking-widest mt-0.5"
+                      style={{ fontFamily: 'var(--font-space-grotesk)', color: prog.accentColor }}
+                    >
+                      {prog.subtitle}
+                    </p>
                   </div>
                 </div>
 

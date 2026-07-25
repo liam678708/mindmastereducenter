@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import {
@@ -14,53 +13,24 @@ import {
 
 const heroData = [
   {
-    prefix: 'Unlock Your Superpowers at',
-    bgColor: '#d2ffddff',
-    image: 'https://images.pexels.com/photos/8421946/pexels-photo-8421946.jpeg',
-  },
-  {
     prefix: 'Master Mathematics at',
-    bgColor: '#faf2d9ff',
-    image: 'https://images.pexels.com/photos/6964688/pexels-photo-6964688.jpeg',
-  },
-  {
-    prefix: 'Discover Joyful Singing at',
-    bgColor: '#fbf3c8ff',
-    image: 'https://images.pexels.com/photos/4711732/pexels-photo-4711732.jpeg',
-  },
-  {
-    prefix: 'Learn Mental Abacus at',
-    bgColor: '#eedbffff',
-    image: 'https://images.pexels.com/photos/6624376/pexels-photo-6624376.jpeg',
+    bgColor: '#d2ffddff',
   },
   {
     prefix: 'Explore Fun Science at',
+    bgColor: '#faf2d9ff',
+  },
+  {
+    prefix: 'Ace Your IELTS at',
+    bgColor: '#fbf3c8ff',
+  },
+  {
+    prefix: 'Crush University Prep at',
+    bgColor: '#eedbffff',
+  },
+  {
+    prefix: 'Build Your Future at',
     bgColor: '#d2ffddff',
-    image: 'https://images.pexels.com/photos/7176476/pexels-photo-7176476.jpeg',
-  },
-];
-
-const floatingStats = [
-  {
-    icon: 'groups',
-    value: '500+',
-    label: 'Students',
-    bg: '#6bb1ff',
-    text: '#003459',
-  },
-  {
-    icon: 'workspace_premium',
-    value: '10+',
-    label: 'Yrs Exp',
-    bg: '#fcdf46',
-    text: '#483d00',
-  },
-  {
-    icon: 'menu_book',
-    value: '50+',
-    label: 'Programs',
-    bg: '#e5c6ff',
-    text: '#4f0089',
   },
 ];
 
@@ -198,8 +168,8 @@ export default function HeroSection() {
           className='text-xl md:text-2xl font-bold max-w-lg text-[#005f28] relative z-10'
           style={{ fontFamily: 'var(--font-manrope)' }}
         >
-          Where curious minds collide with creative genius. Our adaptive
-          learning center transforms students into leaders.
+          Mastering Minds. Shaping Futures — Regina&apos;s premier after-school
+          tutoring centre for Math, Science, ESL &amp; IELTS preparation.
         </motion.p>
 
         {/* Buttons */}
@@ -302,49 +272,10 @@ export default function HeroSection() {
           transition={{ duration: 22, ease: 'linear', repeat: Infinity }}
         />
 
-        {/* Floating stat chips */}
-        {floatingStats.map((stat, i) => (
-          <motion.div
-            key={stat.label}
-            initial={{ opacity: 0, scale: 0.4 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              delay: 0.9 + i * 0.18,
-              type: 'spring',
-              stiffness: 220,
-              damping: 15,
-            }}
-            className='absolute z-30 border-2 border-black flex items-center gap-2 px-3 py-1.5 rounded-full shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]'
-            style={{
-              backgroundColor: stat.bg,
-              top: i === 0 ? '12%' : i === 2 ? '52%' : undefined,
-              bottom: i === 1 ? '18%' : undefined,
-              left: i === 0 ? '4%' : i === 1 ? '4%' : undefined,
-              right: i === 2 ? '3%' : undefined,
-            }}
-          >
-            <span
-              className='material-symbols-outlined text-base'
-              style={{ color: stat.text, fontVariationSettings: "'FILL' 1" }}
-            >
-              {stat.icon}
-            </span>
-            <span
-              className='font-black text-xs whitespace-nowrap'
-              style={{
-                fontFamily: 'var(--font-space-grotesk)',
-                color: stat.text,
-              }}
-            >
-              {stat.value} {stat.label}
-            </span>
-          </motion.div>
-        ))}
-
         {/* Sticker 1: floating yellow badge */}
         <motion.div
           style={{ x: sStX, y: sStY }}
-          className='absolute top-8 right-8 w-28 h-28 md:w-32 md:h-32 bg-[#fcdf46] border-4 border-black rounded-full flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hero-sticker-1 z-20 cursor-pointer'
+          className='absolute top-8 right-16 w-28 h-28 md:w-32 md:h-32 bg-[#fcdf46] border-4 border-black rounded-full flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hero-sticker-1 z-20 cursor-pointer'
           whileHover={{ scale: 1.12 }}
           transition={{ type: 'spring', stiffness: 300 }}
         >
@@ -352,9 +283,9 @@ export default function HeroSection() {
             className='font-black text-center text-xs uppercase text-[#483d00] leading-tight'
             style={{ fontFamily: 'var(--font-space-grotesk)' }}
           >
-            100%
+            Learn with
             <br />
-            Adaptive
+            Confidence
           </span>
         </motion.div>
 
@@ -373,7 +304,7 @@ export default function HeroSection() {
           </span>
         </motion.div>
 
-        {/* Main image with 3D tilt parallax */}
+        {/* Main video card with 3D tilt parallax */}
         <motion.div
           style={{
             rotateX: sTiltX,
@@ -393,21 +324,14 @@ export default function HeroSection() {
             }}
           />
 
-          {heroData.map((data, index) => (
-            <Image
-              key={data.image}
-              src={data.image}
-              alt={data.prefix}
-              fill
-              className={`object-cover transition-all duration-1000 ease-in-out ${
-                index === currentIndex
-                  ? 'opacity-100 scale-100 z-10'
-                  : 'opacity-0 scale-[1.05] z-0'
-              }`}
-              priority={index === 0}
-              sizes='(max-width: 768px) 100vw, 50vw'
-            />
-          ))}
+          <video
+            src='/assets/main-video.mp4'
+            autoPlay
+            muted
+            loop
+            playsInline
+            className='absolute inset-0 w-full h-full object-cover'
+          />
         </motion.div>
 
         {/* Slide label badge (bottom of image) */}

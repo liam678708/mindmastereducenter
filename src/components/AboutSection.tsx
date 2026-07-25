@@ -4,20 +4,14 @@ import Link from 'next/link';
 import { motion, type Variants } from 'framer-motion';
 
 const programs = [
-  { icon: 'toys',               label: 'Play Based Learning', sub: 'Learn through play',     bg: 'bg-white', iconColor: 'text-[#8126cf]', border: 'border-black' },
-  { icon: 'language',           label: 'English Learning',    sub: 'Complete ESL guidance',  bg: 'bg-white', iconColor: 'text-[#1a84d2]', border: 'border-black' },
-  { icon: 'menu_book',          label: 'Early Literacy',      sub: 'Read & write skills',    bg: 'bg-white', iconColor: 'text-[#6a5b00]', border: 'border-black' },
-  { icon: 'palette',            label: 'Arts and Crafts',     sub: 'Create & express',       bg: 'bg-white', iconColor: 'text-[#8126cf]', border: 'border-black' },
-  { icon: 'construction',       label: 'Skill Development',   sub: 'Hands-on building',      bg: 'bg-white', iconColor: 'text-[#1a84d2]', border: 'border-black' },
-  { icon: 'school',             label: 'IELTS Preparation',   sub: 'Exam strategies given',  bg: 'bg-white', iconColor: 'text-[#6a5b00]', border: 'border-black' },
-  { icon: 'lightbulb',          label: 'Creative Activities', sub: 'Imagination unleashed',  bg: 'bg-white', iconColor: 'text-[#8126cf]', border: 'border-black' },
-  { icon: 'park',               label: 'Outdoor Play',        sub: 'Active & energetic',     bg: 'bg-white', iconColor: 'text-[#1a84d2]', border: 'border-black' },
-];
-
-const stats = [
-  { value: '500+', label: 'Students' },
-  { value: '50+', label: 'Programs' },
-  { value: '10+', label: 'Years' },
+  { icon: 'calculate',          label: 'Math Tutoring',       sub: 'Grades 4-12 + University',     bg: 'bg-white', iconColor: 'text-[#8126cf]', border: 'border-black' },
+  { icon: 'biotech',            label: 'Science Tutoring',    sub: 'Biology, Chemistry, Physics',  bg: 'bg-white', iconColor: 'text-[#1a84d2]', border: 'border-black' },
+  { icon: 'translate',          label: 'ESL Classes',         sub: 'English for newcomers',        bg: 'bg-white', iconColor: 'text-[#6a5b00]', border: 'border-black' },
+  { icon: 'menu_book',          label: 'IELTS Preparation',   sub: 'All four exam components',     bg: 'bg-white', iconColor: 'text-[#8126cf]', border: 'border-black' },
+  { icon: 'account_balance',    label: 'Uni Admission Prep',  sub: 'Top 10 Canadian universities', bg: 'bg-white', iconColor: 'text-[#1a84d2]', border: 'border-black' },
+  { icon: 'school',             label: 'University Tutoring', sub: 'Undergraduate STEM courses',   bg: 'bg-white', iconColor: 'text-[#6a5b00]', border: 'border-black' },
+  { icon: 'videocam',           label: 'Virtual Tutoring',    sub: 'Zoom sessions available',       bg: 'bg-white', iconColor: 'text-[#8126cf]', border: 'border-black' },
+  { icon: 'assignment',         label: 'Intake Assessments',  sub: 'Evaluate academic levels',      bg: 'bg-white', iconColor: 'text-[#1a84d2]', border: 'border-black' },
 ];
 
 const fadeLeft: Variants = {
@@ -87,33 +81,25 @@ export default function AboutSection() {
             className='text-lg font-bold text-[#5b5b5b] max-w-md mb-10 leading-relaxed'
             style={{ fontFamily: 'var(--font-manrope)' }}
           >
-            A next-generation education center where every learner is empowered
-            to discover their strengths, build real-world skills, and lead with
-            confidence. We blend technology, creativity, and mentorship into one
-            extraordinary journey.
+            Mind Masters EduCenter Inc. is Regina&apos;s after-school tutoring and
+            learning institution dedicated to high-quality Mathematics and
+            Science instruction for Grades 4–12 and university students. We
+            also offer ESL, IELTS preparation, and university admission support
+            — all through structured, personalized learning plans.
           </p>
 
-          {/* Stats */}
+          {/* Motto */}
           <div className='flex flex-wrap gap-5 mb-10'>
-            {stats.map((s) => (
-              <div
-                key={s.label}
-                className='bg-white border-4 border-black px-6 py-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]'
+            <div
+              className='bg-white border-4 border-black px-6 py-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]'
+            >
+              <p
+                className='text-base font-black text-[#005f28]'
+                style={{ fontFamily: 'var(--font-space-grotesk)' }}
               >
-                <p
-                  className='text-3xl font-black text-[#8126cf]'
-                  style={{ fontFamily: 'var(--font-space-grotesk)' }}
-                >
-                  {s.value}
-                </p>
-                <p
-                  className='text-xs font-black uppercase text-[#5b5b5b] tracking-wide'
-                  style={{ fontFamily: 'var(--font-space-grotesk)' }}
-                >
-                  {s.label}
-                </p>
-              </div>
-            ))}
+                &quot;Mastering Minds. Shaping Futures&quot;
+              </p>
+            </div>
           </div>
 
           <Link

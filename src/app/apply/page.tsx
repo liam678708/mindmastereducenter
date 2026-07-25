@@ -4,7 +4,7 @@ import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 
-type Program = 'after-school' | 'university-support' | 'krazy-math' | 'preschool';
+type Program = 'math-science' | 'university-support' | 'esl-ielts';
 
 const programOptions: {
   id: Program;
@@ -16,40 +16,31 @@ const programOptions: {
   border: string;
 }[] = [
   {
-    id: 'after-school',
-    label: 'After School Program',
-    icon: 'local_library',
-    desc: 'Grades 4–12 · Sunshine, Freshman/Sophomore & Junior/Senior Math & Science',
+    id: 'math-science',
+    label: 'School Success Program',
+    icon: 'calculate',
+    desc: 'Sunshine (4-8), Freshman/Sophomore (8-10), Junior/Senior (11-12) · Math & Science',
     color: '#1a84d2',
     bg: '#e8f4ff',
     border: 'border-[#86c8ef]',
   },
   {
     id: 'university-support',
-    label: 'University Support',
+    label: 'University Prep & Tutoring',
     icon: 'account_balance',
-    desc: 'University Tutoring · Top 10 Admission Prep · IELTS · On-Demand Tutoring',
+    desc: 'Undergraduate Tutoring · Top 10 Admission Prep · On-Demand Tutoring',
     color: '#6a5b00',
     bg: '#fffbe8',
     border: 'border-[#fde68a]',
   },
   {
-    id: 'krazy-math',
-    label: 'Krazy Math Tutorial',
-    icon: 'calculate',
-    desc: 'Grades 2–12 · Mon, Tue, Thu · 6:30 – 8:30 PM · 1876 Wallace St, Regina SK',
+    id: 'esl-ielts',
+    label: 'ESL & IELTS Preparation',
+    icon: 'translate',
+    desc: 'ESL Studies · IELTS Exam Preparation · All four components · All levels',
     color: '#8126cf',
     bg: '#f5e8ff',
     border: 'border-[#c4b5fd]',
-  },
-  {
-    id: 'preschool',
-    label: 'Preschool Program',
-    icon: 'child_care',
-    desc: 'Ages 3–5 · Mon–Fri · 9:00 AM – 12:00 PM · Darul Falah Islamic Centre',
-    color: '#1a84d2',
-    bg: '#e8f4ff',
-    border: 'border-[#86c8ef]',
   },
 ];
 
@@ -575,6 +566,17 @@ function ApplyForm() {
                         style={{ fontFamily: 'var(--font-manrope)' }}
                       />
                     </Field>
+                  </div>
+
+                  {/* Payment note */}
+                  <div className='bg-[#fffbe8] border-2 border-[#fde68a] rounded-xl p-4 flex items-start gap-3'>
+                    <span className='material-symbols-outlined text-xl text-[#6a5b00] flex-shrink-0 mt-0.5' style={{ fontVariationSettings: "'FILL' 1" }}>payments</span>
+                    <div>
+                      <p className='font-black text-xs uppercase tracking-wide text-[#6a5b00] mb-1' style={{ fontFamily: 'var(--font-space-grotesk)' }}>Payment Information</p>
+                      <p className='font-bold text-sm text-[#2f2f2f]' style={{ fontFamily: 'var(--font-manrope)' }}>
+                        Payment is accepted by cash or e-transfer. Please contact the admin for payment details after submitting your application.
+                      </p>
+                    </div>
                   </div>
 
                   {/* Submit */}

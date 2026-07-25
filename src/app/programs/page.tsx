@@ -5,48 +5,56 @@ import Link from 'next/link';
 
 const programs = [
   {
-    id: 'after-school',
-    badge: 'After School',
-    title: 'After School Program',
-    subtitle: 'Grades 4-12',
-    description: 'Sunshine Program (Grades 4-8), Freshman/Sophomore Math & Science (Grades 8-10), and Junior/Senior Math & Science (Grades 11-12) to support academic growth.',
+    id: 'math-science',
+    badge: 'Core Program',
+    title: 'School Success Program',
+    subtitle: 'Mathematics & Science Tutoring — Grades 4-12',
+    description: 'Mind Masters EduCenter\'s goal is to help our learners develop, study, and learn skills that will help them set up for academic success at the elementary and through secondary and tertiary levels of education. We provide top-quality, affordable, convenient tutoring programs customized to each learner\'s strengths and weaknesses and their best way of learning.',
     details: [
-      { icon: 'school', label: 'Grades', value: 'Grade 4 - Grade 12' },
-      { icon: 'payments', label: 'Fees', value: 'Contact for pricing' },
-      { icon: 'schedule', label: 'Schedule', value: 'Weekdays · After school hours' },
-      { icon: 'location_on', label: 'Location', value: 'Mind Masters Edu Center' },
+      { icon: 'school', label: 'Grades', value: 'Grade 4 – Grade 12' },
+      { icon: 'payments', label: 'Pricing', value: '$35/hr or $150/mo (8 sessions)' },
+      { icon: 'schedule', label: 'Schedule', value: 'On-demand & structured batches' },
+      { icon: 'videocam', label: 'Format', value: 'In-person & Zoom available' },
     ],
     features: [
       'Sunshine Program (Grades 4-8)',
-      'Freshman/Sophomore Math & Science',
-      'Junior/Senior Math & Science',
-      'Curriculum-aligned support'
+      'Freshman/Sophomore (Grades 8-10)',
+      'Junior/Senior (Grades 11-12)',
+      'Saskatchewan Curriculum aligned',
+      'Small-group learning for focused attention',
+      'Intake assessment to evaluate academic level',
     ],
     accentColor: '#1a84d2',
     accentBg: '#e8f4ff',
     borderColor: 'border-[#86c8ef]',
     tagBg: 'bg-[#6bb1ff]',
     tagText: 'text-[#003459]',
-    icon: 'local_library',
+    icon: 'calculate',
     contact: 'Contact us to enroll',
+    longDescription: `Mathematics is one of the most essential skills applied in every aspect of life. At Mind Masters, our primary focus is to strengthen problem-solving skills and develop fundamental mathematical techniques. We make math easy enough for our students to fall in love with it. Our highly qualified tutors break down difficult problems into easy-to-learn steps using real-life examples.
+
+Science is the systematic study of the physical and natural world through observation, experimentation, and testing. We teach students the fundamentals necessary for success in advanced science classes such as Biology, Chemistry, and Physics. We provide small-group sessions so every child can learn at their own pace.`,
+    zoomNote: 'Virtual tutoring options via Zoom available for students unable to attend in person.',
   },
   {
     id: 'university-support',
-    badge: 'University Support',
-    title: 'University Support',
-    subtitle: 'Admission & Tutoring',
-    description: 'Comprehensive University-Level Tutoring, Top 10 Canadian Universities Admission Preparation, IELTS Preparation, and On-Demand Hourly Tutoring to help you succeed in higher education.',
+    badge: 'Advanced',
+    title: 'University Prep & Tutoring',
+    subtitle: 'Undergraduate Tutoring & Top 10 Admission Prep',
+    description: 'Our university tutoring programs support students navigating the academic demands of undergraduate Mathematics and Science courses. We provide structured, goal-oriented support aligned with university curricula — covering Calculus, Linear Algebra, Statistics, Differential Equations, Physics, Chemistry, and Biology.',
     details: [
       { icon: 'school', label: 'Level', value: 'Pre-University & University' },
-      { icon: 'payments', label: 'Fees', value: 'Contact for pricing' },
+      { icon: 'payments', label: 'Pricing', value: '$35/hr or $150/mo (8 sessions)' },
       { icon: 'schedule', label: 'Schedule', value: 'Flexible scheduling' },
-      { icon: 'location_on', label: 'Location', value: 'Mind Masters Edu Center & Online' },
+      { icon: 'videocam', label: 'Format', value: 'In-person & Zoom available' },
     ],
     features: [
-      'University-Level Tutoring',
-      'Top 10 Admission Prep',
-      'IELTS Preparation',
-      'On-Demand Hourly Tutoring'
+      'University-Level Math & Science Tutoring',
+      'Top 10 Canadian Universities Admission Prep',
+      'Calculus, Linear Algebra, Statistics',
+      'Physics, Chemistry, Biology',
+      'Exam-focused strategies',
+      'One-on-one & small-group sessions',
     ],
     accentColor: '#6a5b00',
     accentBg: '#fffbe8',
@@ -55,61 +63,43 @@ const programs = [
     tagText: 'text-[#483d00]',
     icon: 'account_balance',
     contact: 'Contact us to enroll',
+    longDescription: `We emphasize conceptual understanding over memorization, ensuring students grasp the "why" behind formulas, models, and scientific principles. Our experienced tutors break down complex topics into clear, manageable steps, connect abstract concepts to practical applications, and reinforce learning through guided practice.
+
+The Top 10 Canadian Universities admission preparation program is customized to help students meet the entry requirements of their target institutions. We provide dedicated mentorship, application guidance, and subject-specific preparation to maximize admission success.`,
+    zoomNote: 'Virtual tutoring options via Zoom available for students unable to attend in person.',
   },
   {
-    id: 'krazy-math',
-    badge: 'After School Club',
-    title: 'Krazy Math Tutorial',
-    subtitle: 'Advanced After School Program',
-    description:
-      'An advanced math-focused after-school program aligned with the Saskatchewan School Board curriculum — designed to challenge and inspire students from Grade 2 through Grade 12.',
+    id: 'esl-ielts',
+    badge: 'Language Program',
+    title: 'ESL & IELTS Preparation',
+    subtitle: 'English Language & Exam Preparation',
+    description: 'The IELTS exam is an important step for individuals planning to study, work, or immigrate to an English-speaking country. Achieving a high band score requires effective test-taking strategies, confidence, and consistent practice — our program delivers exactly that.',
     details: [
-      { icon: 'school', label: 'Grades', value: 'Grade 2 – Grade 12' },
-      { icon: 'payments', label: 'Fees', value: 'Gr 2–7: $120/mo · Gr 8–12: $150/mo' },
-      { icon: 'schedule', label: 'Schedule', value: 'Mon, Tue, Thu · 6:30 – 8:30 PM' },
-      { icon: 'location_on', label: 'Location', value: '1876 Wallace St, Regina, SK' },
+      { icon: 'translate', label: 'Level', value: 'All levels welcome' },
+      { icon: 'payments', label: 'Pricing', value: 'Contact for pricing' },
+      { icon: 'schedule', label: 'Schedule', value: 'Flexible scheduling' },
+      { icon: 'videocam', label: 'Format', value: 'In-person & Zoom available' },
     ],
     features: [
-      'Advanced-level math instruction',
-      'Saskatchewan curriculum-aligned',
-      'Grades 2 through 12',
-      '$50 sibling discount',
+      'Reading, Writing, Listening, Speaking',
+      'Interactive lessons & practical exercises',
+      'Personalized feedback on writing',
+      'Comprehensive speaking practice',
+      'Printed study materials & audio resources',
+      'Pronunciation, fluency & body language guidance',
     ],
     accentColor: '#8126cf',
     accentBg: '#f5e8ff',
     borderColor: 'border-[#c4b5fd]',
     tagBg: 'bg-[#e5c6ff]',
     tagText: 'text-[#4f0089]',
-    icon: 'calculate',
-    contact: '+1 (306) 515-3614',
+    icon: 'translate',
+    contact: 'Contact us to enroll',
+    longDescription: `Our ESL studies support immigrants and newcomers in developing English language proficiency for daily life, work, and further education. Our IELTS Preparation Class helps students build confidence and techniques to excel in all four exam components.
+
+We work through reading passages and listening tasks together, provide detailed feedback on writing assignments, and offer comprehensive speaking practice covering every part of the IELTS interview. Our goal is to make IELTS preparation engaging, practical, and results-oriented, helping every student achieve their desired band score.`,
+    zoomNote: 'Virtual tutoring options via Zoom available for students unable to attend in person.',
   },
-  {
-    id: 'preschool',
-    badge: 'Preschool',
-    title: 'Preschool Program',
-    subtitle: 'Darul Falah Islamic Centre',
-    description:
-      'A nurturing preschool program focused on learning through play, creativity, and foundational skills — enriched with Islamic values to build strong character from the very beginning.',
-    details: [
-      { icon: 'child_care', label: 'Age Group', value: '3 – 5 Years' },
-      { icon: 'payments', label: 'Fees', value: '$200 / month' },
-      { icon: 'schedule', label: 'Schedule', value: 'Mon – Fri · 9:00 AM – 12:00 PM' },
-      { icon: 'mosque', label: 'Centre', value: 'Darul Falah Islamic Centre' },
-    ],
-    features: [
-      'Learning through play & creativity',
-      'Foundational literacy & numeracy',
-      'Islamic values & character building',
-      'Safe & nurturing environment',
-    ],
-    accentColor: '#1a84d2',
-    accentBg: '#e8f4ff',
-    borderColor: 'border-[#86c8ef]',
-    tagBg: 'bg-[#6bb1ff]',
-    tagText: 'text-[#003459]',
-    icon: 'child_care',
-    contact: 'Contact for details',
-  }
 ];
 
 const stagger: Variants = {
@@ -150,7 +140,7 @@ export default function ProgramsPage() {
               className="text-lg font-bold text-[#5b5b5b] mt-3 max-w-xl"
               style={{ fontFamily: 'var(--font-manrope)' }}
             >
-              Explore every program we offer — from preschool to high school, math tutoring to Quran studies.
+              Mind Masters EduCenter&apos;s goal is to help our learners develop, study, and learn skills for academic success. We provide top-quality, affordable tutoring customized to each learner&apos;s strengths.
             </p>
           </motion.div>
         </div>
@@ -160,7 +150,7 @@ export default function ProgramsPage() {
       <section className="py-16 px-6 md:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
+            className="grid grid-cols-1 gap-10"
             variants={stagger}
             initial="hidden"
             animate="visible"
@@ -172,49 +162,45 @@ export default function ProgramsPage() {
                 whileHover={{ y: -6, transition: { duration: 0.2 } }}
                 className={`bg-white border-4 border-black rounded-2xl overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col`}
               >
-                {/* Card top accent */}
+                {/* Banner */}
                 <div
-                  className="h-2 flex-shrink-0"
-                  style={{ backgroundColor: prog.accentColor }}
-                />
-
-                <div className="p-7 flex flex-col gap-4 flex-grow">
-                  {/* Badge + icon row */}
-                  <div className="flex items-center justify-between">
+                  className="px-6 py-6 flex items-center gap-4 border-b-4 border-black"
+                  style={{ backgroundColor: prog.accentBg }}
+                >
+                  <div
+                    className="w-14 h-14 border-2 border-black rounded-xl flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: prog.accentColor }}
+                  >
                     <span
-                      className={`${prog.tagBg} ${prog.tagText} border-2 border-black font-black text-xs uppercase tracking-wide px-3 py-1 rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]`}
+                      className="material-symbols-outlined text-3xl text-white"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                    >
+                      {prog.icon}
+                    </span>
+                  </div>
+                  <div className="min-w-0">
+                    <span
+                      className={`${prog.tagBg} ${prog.tagText} border-2 border-black font-black text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-lg inline-block mb-1`}
                       style={{ fontFamily: 'var(--font-space-grotesk)' }}
                     >
                       {prog.badge}
                     </span>
-                    <div
-                      className="w-10 h-10 border-2 border-black rounded-xl flex items-center justify-center flex-shrink-0"
-                      style={{ backgroundColor: prog.accentBg }}
-                    >
-                      <span
-                        className="material-symbols-outlined text-xl"
-                        style={{ color: prog.accentColor, fontVariationSettings: "'FILL' 1" }}
-                      >
-                        {prog.icon}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Title */}
-                  <div>
-                    <p
-                      className="font-bold text-xs uppercase tracking-widest mb-1"
-                      style={{ fontFamily: 'var(--font-space-grotesk)', color: prog.accentColor }}
-                    >
-                      {prog.subtitle}
-                    </p>
                     <h3
-                      className="text-xl font-black text-[#1a1a1a] leading-tight"
+                      className="text-xl md:text-2xl font-black text-[#1a1a1a] leading-tight"
                       style={{ fontFamily: 'var(--font-space-grotesk)' }}
                     >
                       {prog.title}
                     </h3>
+                    <p
+                      className="font-bold text-xs uppercase tracking-widest mt-0.5"
+                      style={{ fontFamily: 'var(--font-space-grotesk)', color: prog.accentColor }}
+                    >
+                      {prog.subtitle}
+                    </p>
                   </div>
+                </div>
+
+                <div className="p-7 flex flex-col gap-4 flex-grow">
 
                   {/* Description */}
                   <p
@@ -280,6 +266,26 @@ export default function ProgramsPage() {
                       </div>
                     ))}
                   </div>
+
+                  {/* Long description */}
+                  {prog.longDescription && (
+                    <div className="border-t-2 border-[#e2e2e2] pt-4">
+                      <p
+                        className="font-bold text-sm text-[#5b5b5b] leading-relaxed whitespace-pre-line"
+                        style={{ fontFamily: 'var(--font-manrope)' }}
+                      >
+                        {prog.longDescription}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Zoom note */}
+                  {prog.zoomNote && (
+                    <div className={`flex items-center gap-2 border-2 ${prog.borderColor} rounded-xl p-3`} style={{ backgroundColor: prog.accentBg }}>
+                      <span className="material-symbols-outlined text-base flex-shrink-0" style={{ color: prog.accentColor, fontVariationSettings: "'FILL' 1" }}>videocam</span>
+                      <span className="font-bold text-xs text-[#1a1a1a]" style={{ fontFamily: 'var(--font-manrope)' }}>{prog.zoomNote}</span>
+                    </div>
+                  )}
 
                   {/* CTA */}
                   <div className="flex flex-wrap gap-2 mt-auto pt-2">

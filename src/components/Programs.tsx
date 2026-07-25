@@ -1,53 +1,44 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { motion, type Variants } from 'framer-motion';
 
 const programs = [
   {
-    title: 'After School Program',
+    title: 'School Success Program',
     grade: 'Grades 4-12',
     gradeStyle: 'bg-[#6bb1ff] rotate-12',
     description:
-      'Sunshine Program, Freshman/Sophomore, and Junior/Senior Math & Science.',
+      'Sunshine (4-8), Freshman/Sophomore (8-10), Junior/Senior (11-12) Math & Science — Saskatchewan Curriculum aligned.',
     btnBg: 'bg-[#6bb1ff] text-[#003459]',
-    image:
-      'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80',
-    imageAlt: 'Young students engaged in a colorful science experiment',
+    icon: 'calculate',
+    iconColor: '#1a84d2',
+    accentBg: '#e8f4ff',
+    zoomNote: 'In-person & Zoom available',
   },
   {
-    title: 'University Support',
-    grade: 'Pre-Uni & Uni',
+    title: 'University Prep & Tutoring',
+    grade: 'Uni & Pre-Uni',
     gradeStyle: 'bg-[#fcdf46] -rotate-12',
     description:
-      'University-Level Tutoring, Top 10 Admission Prep, and IELTS Preparation.',
+      'Undergraduate Math & Science Tutoring, Top 10 Canadian University Admission Preparation, and On-Demand Tutoring.',
     btnBg: 'bg-[#fcdf46] text-[#483d00]',
-    image:
-      'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80',
-    imageAlt: 'University students studying',
+    icon: 'account_balance',
+    iconColor: '#6a5b00',
+    accentBg: '#fffbe8',
+    zoomNote: 'In-person & Zoom available',
   },
   {
-    title: 'Krazy Math Tutorial',
-    grade: 'Grades 2-12',
-    gradeStyle: 'bg-[#e5c6ff] rotate-6',
+    title: 'ESL & IELTS Preparation',
+    grade: 'All Ages',
+    gradeStyle: 'bg-[#8126cf] rotate-6 text-white',
     description:
-      'Advanced math-focused after-school program aligned with the Saskatchewan curriculum.',
-    btnBg: 'bg-[#e5c6ff] text-[#4f0089]',
-    image:
-      'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80',
-    imageAlt: 'Senior high school students presenting a capstone project',
-  },
-  {
-    title: 'Preschool Program',
-    grade: 'Ages 3-5',
-    gradeStyle: 'bg-[#1a84d2] -rotate-6 text-white',
-    description:
-      'Learning through play, creativity, and foundational skills with Islamic values.',
-    btnBg: 'bg-[#1a84d2] text-white',
-    image:
-      'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800&q=80',
-    imageAlt: 'Pre-teen students collaborating on a digital design project',
+      'ESL studies for newcomers and comprehensive IELTS exam preparation with experienced instructors. Achieve your target band score.',
+    btnBg: 'bg-[#8126cf] text-white',
+    icon: 'translate',
+    iconColor: '#8126cf',
+    accentBg: '#f5e8ff',
+    zoomNote: 'In-person & Zoom available',
   },
 ];
 
@@ -81,13 +72,13 @@ export default function Programs() {
               className='text-4xl md:text-6xl font-black uppercase tracking-tighter'
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
-              Academic Excellence
+              Our Programs
             </h2>
             <p
               className='text-xl font-bold mt-2 text-[#5b5b5b]'
               style={{ fontFamily: 'var(--font-manrope)' }}
             >
-              Tailored pathways for every stage of growth.
+              Top-quality tutoring customized to each learner&apos;s needs.
             </p>
           </div>
           <Link
@@ -100,7 +91,7 @@ export default function Programs() {
         </motion.div>
 
         <motion.div
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'
+          className='grid grid-cols-1 md:grid-cols-3 gap-8'
           variants={stagger}
           initial='hidden'
           whileInView='visible'
@@ -113,14 +104,15 @@ export default function Programs() {
               whileHover={{ y: -6, transition: { duration: 0.2 } }}
               className='bg-white border-4 border-black rounded overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col'
             >
-              <div className='h-48 border-b-4 border-black relative overflow-hidden'>
-                <Image
-                  src={program.image}
-                  alt={program.imageAlt}
-                  fill
-                  className='object-cover'
-                  sizes='(max-width: 768px) 100vw, 33vw'
-                />
+              <div className='h-48 border-b-4 border-black relative overflow-hidden flex items-center justify-center'
+                style={{ backgroundColor: program.accentBg }}
+              >
+                <span
+                  className='material-symbols-outlined text-7xl opacity-30'
+                  style={{ color: program.iconColor }}
+                >
+                  {program.icon}
+                </span>
                 <div
                   className={`absolute top-4 right-4 ${program.gradeStyle} border-2 border-black font-black text-xs px-3 py-1 uppercase z-10`}
                   style={{ fontFamily: 'var(--font-space-grotesk)' }}
@@ -136,17 +128,24 @@ export default function Programs() {
                   {program.title}
                 </h3>
                 <p
-                  className='text-[#5b5b5b] font-bold mb-8 flex-grow'
+                  className='text-[#5b5b5b] font-bold mb-3 flex-grow'
                   style={{ fontFamily: 'var(--font-manrope)' }}
                 >
                   {program.description}
                 </p>
-                <button
-                  className={`brutalist-button mt-auto w-full ${program.btnBg} font-black py-4 border-4 border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]`}
+                <p
+                  className='text-xs font-black uppercase tracking-wide mb-5'
+                  style={{ fontFamily: 'var(--font-space-grotesk)', color: program.iconColor }}
+                >
+                  {program.zoomNote}
+                </p>
+                <Link
+                  href={`/apply?program=${program.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  className={`brutalist-button mt-auto w-full text-center ${program.btnBg} font-black py-4 border-4 border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]`}
                   style={{ fontFamily: 'var(--font-space-grotesk)' }}
                 >
                   Explore Program
-                </button>
+                </Link>
               </div>
             </motion.div>
           ))}

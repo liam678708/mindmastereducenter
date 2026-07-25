@@ -15,7 +15,7 @@ const contactCards = [
   {
     icon: 'phone',
     label: 'Phone',
-    value: '+1 306-999-0855',
+    value: '+1 (306) 999-0855  |  +1 (306) 456-3094',
     bg: 'bg-[#f5e8ff]',
     iconColor: 'text-[#8126cf]',
     border: 'border-[#c4b5fd]',

@@ -2,14 +2,14 @@ import Link from "next/link";
 
 const footerLinks = {
   Explore: [
-    { label: "Programs", href: "#programs" },
-    { label: "Classes", href: "#schedule" },
-    { label: "About", href: "#why-us" },
+    { label: "Programs", href: "/programs" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
   ],
-  Support: [
-    { label: "Contact", href: "#contact" },
-    { label: "Help Center", href: "#" },
-    { label: "Privacy", href: "#" },
+  Programs: [
+    { label: "School Success", href: "/programs" },
+    { label: "University Prep", href: "/programs" },
+    { label: "ESL & IELTS", href: "/programs" },
   ],
 };
 
@@ -22,38 +22,37 @@ export default function Footer() {
           className="text-2xl md:text-3xl font-black mb-4 block uppercase"
           style={{ fontFamily: "var(--font-space-grotesk)" }}
         >
-          Mind Masters Edu Center
+          Mind Masters EduCenter
         </span>
         <p
           className="font-extrabold uppercase mb-8 text-sm leading-relaxed"
           style={{ fontFamily: "var(--font-manrope)" }}
         >
-          Empowering the next generation of global innovators through radical
-          education.
+          Mastering Minds. Shaping Futures.
         </p>
         <div className="flex gap-4">
           <a
-            href="#"
+            href="tel:+13064563094"
             className="w-10 h-10 border-2 border-black rounded-full flex items-center justify-center hover:bg-black hover:text-[#fcdf46] transition-colors"
-            aria-label="Share"
+            aria-label="Call us"
           >
-            <span className="material-symbols-outlined text-xl">share</span>
+            <span className="material-symbols-outlined text-xl">call</span>
           </a>
           <a
-            href="#"
+            href="mailto:mindmasterslearningcentre@gmail.com"
             className="w-10 h-10 border-2 border-black rounded-full flex items-center justify-center hover:bg-black hover:text-[#fcdf46] transition-colors"
             aria-label="Email"
           >
             <span className="material-symbols-outlined text-xl">mail</span>
           </a>
           <a
-            href="#"
+            href="https://maps.google.com/?q=131+Woodward+Ave+Regina+SK"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-10 h-10 border-2 border-black rounded-full flex items-center justify-center hover:bg-black hover:text-[#fcdf46] transition-colors"
-            aria-label="Instagram"
+            aria-label="Directions"
           >
-            <span className="material-symbols-outlined text-xl">
-              photo_camera
-            </span>
+            <span className="material-symbols-outlined text-xl">location_on</span>
           </a>
         </div>
       </div>
@@ -81,22 +80,33 @@ export default function Footer() {
           </div>
         ))}
 
-        {/* Copyright */}
+        {/* Copyright & info */}
         <div className="col-span-2 md:col-span-1 mt-4 md:mt-0 pt-6 md:pt-0 border-t-2 md:border-t-0 border-black/20">
           <p
             className="text-xs font-bold leading-relaxed"
             style={{ fontFamily: "var(--font-manrope)" }}
           >
-            © 2024 Mind Masters Edu Center.
-            <br />
-            All Rights Reserved.
+            © {new Date().getFullYear()} Mind Masters EduCenter Inc.
+          </p>
+          <p
+            className="text-xs font-bold leading-relaxed"
+            style={{ fontFamily: "var(--font-manrope)" }}
+          >
+            131 Woodward Ave, Regina, SK
           </p>
           <p
             className="text-xs font-bold mt-2 text-black/60"
             style={{ fontFamily: "var(--font-manrope)" }}
           >
-            Transforming education, one student at a time.
+            (306) 456-3094
           </p>
+          <Link
+            href="/apply"
+            className="brutalist-button inline-block mt-3 bg-black text-[#fcdf46] font-black text-xs px-4 py-2 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+            style={{ fontFamily: "var(--font-space-grotesk)" }}
+          >
+            Apply Now
+          </Link>
         </div>
       </div>
     </footer>

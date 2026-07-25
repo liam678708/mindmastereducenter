@@ -4,13 +4,6 @@ import { motion, type Variants } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const stats = [
-  { value: '500+', label: 'Students Enrolled', icon: 'people', color: '#1a84d2', bg: '#e8f4ff', border: 'border-[#86c8ef]' },
-  { value: '10+', label: 'Years of Excellence', icon: 'verified', color: '#8126cf', bg: '#f5e8ff', border: 'border-[#c4b5fd]' },
-  { value: '20+', label: 'Expert Educators', icon: 'school', color: '#6a5b00', bg: '#fffbe8', border: 'border-[#fde68a]' },
-  { value: '95%', label: 'Student Success Rate', icon: 'emoji_events', color: '#1a84d2', bg: '#e8f4ff', border: 'border-[#86c8ef]' },
-];
-
 const teamMembers = [
   {
     name: 'Aisha Rahman',
@@ -21,7 +14,7 @@ const teamMembers = [
     border: 'border-[#86c8ef]',
     tagBg: 'bg-[#6bb1ff]',
     tagText: 'text-[#003459]',
-    desc: 'MA in Education with 12 years developing outcome-driven curricula for K-12 learners.',
+    desc: 'MA in Education with 12 years developing outcome-driven curricula for K-12 Math & Science learners.',
   },
   {
     name: 'Omar Siddiqui',
@@ -36,36 +29,36 @@ const teamMembers = [
   },
   {
     name: 'Fatima Al-Noor',
-    role: 'Preschool Director',
-    icon: 'child_care',
+    role: 'Science Specialist',
+    icon: 'biotech',
     bg: '#fffbe8',
     iconColor: '#6a5b00',
     border: 'border-[#fde68a]',
     tagBg: 'bg-[#fcdf46]',
     tagText: 'text-[#483d00]',
-    desc: 'Early childhood specialist who believes every child learns best through play and exploration.',
+    desc: 'Biology & Chemistry expert who makes complex scientific concepts accessible and engaging.',
   },
   {
-    name: 'Yusuf Malik',
-    role: 'Quran & Islamic Studies',
-    icon: 'import_contacts',
+    name: 'Sara Hussain',
+    role: 'ESL & IELTS Instructor',
+    icon: 'translate',
     bg: '#e8f4ff',
     iconColor: '#1a84d2',
     border: 'border-[#86c8ef]',
     tagBg: 'bg-[#6bb1ff]',
     tagText: 'text-[#003459]',
-    desc: 'Hafiz ul Quran with ijazah in Tajweed, bringing warmth and patience to every class.',
+    desc: 'Certified ESL instructor with proven track record of helping students achieve target band scores.',
   },
   {
-    name: 'Sara Hussain',
-    role: 'Student Counselor',
-    icon: 'psychology',
+    name: 'Yusuf Malik',
+    role: 'University Prep Coach',
+    icon: 'account_balance',
     bg: '#f5e8ff',
     iconColor: '#8126cf',
     border: 'border-[#c4b5fd]',
     tagBg: 'bg-[#e5c6ff]',
     tagText: 'text-[#4f0089]',
-    desc: 'Certified counselor focused on social-emotional learning and helping students thrive.',
+    desc: 'Guides students through Top 10 Canadian university applications with personalized mentorship.',
   },
   {
     name: 'Hassan Qureshi',
@@ -76,7 +69,7 @@ const teamMembers = [
     border: 'border-[#fde68a]',
     tagBg: 'bg-[#fcdf46]',
     tagText: 'text-[#483d00]',
-    desc: 'Software engineer turned educator — runs robotics, coding camps, and VR learning sessions.',
+    desc: 'Integrates technology into learning — runs virtual tutoring sessions and interactive STEM workshops.',
   },
 ];
 
@@ -122,7 +115,7 @@ export default function AboutPage() {
               className="text-lg md:text-xl font-bold text-[#aaa] max-w-2xl leading-relaxed mb-10"
               style={{ fontFamily: 'var(--font-manrope)' }}
             >
-              A community where curious minds collide with creative genius. Since our founding, we have been transforming students into confident leaders — one lesson at a time.
+              An after-school tutoring and learning institution dedicated to delivering high-quality Mathematics and Science instruction to Grades 4–12 and university students in Regina, Saskatchewan.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -140,52 +133,6 @@ export default function AboutPage() {
                 Contact Us
               </Link>
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ── STATS ── */}
-      <section className="py-14 px-6 md:px-8 bg-white border-b-4 border-black">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-6"
-            variants={stagger}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            {stats.map((s) => (
-              <motion.div
-                key={s.label}
-                variants={fadeUp}
-                className={`${s.border} border-2 rounded-2xl p-6 flex flex-col items-start gap-2`}
-                style={{ backgroundColor: s.bg }}
-              >
-                <div
-                  className="w-10 h-10 border-2 border-black rounded-xl flex items-center justify-center mb-1"
-                  style={{ backgroundColor: s.color }}
-                >
-                  <span
-                    className="material-symbols-outlined text-xl text-white"
-                    style={{ fontVariationSettings: "'FILL' 1" }}
-                  >
-                    {s.icon}
-                  </span>
-                </div>
-                <span
-                  className="text-3xl font-black text-[#1a1a1a]"
-                  style={{ fontFamily: 'var(--font-space-grotesk)' }}
-                >
-                  {s.value}
-                </span>
-                <span
-                  className="font-bold text-sm text-[#5b5b5b]"
-                  style={{ fontFamily: 'var(--font-manrope)' }}
-                >
-                  {s.label}
-                </span>
-              </motion.div>
-            ))}
           </motion.div>
         </div>
       </section>
@@ -217,13 +164,13 @@ export default function AboutPage() {
               </h2>
               <div className="flex flex-col gap-4" style={{ fontFamily: 'var(--font-manrope)' }}>
                 <p className="font-bold text-base text-[#2f2f2f] leading-relaxed">
-                  Mind Masters Edu Center was founded with a simple but powerful belief: every child carries a unique spark of genius. Our role is to fan that flame — not extinguish it with one-size-fits-all instruction.
+                  Mind Masters EduCenter Inc. was founded with a clear mission: to provide high-quality, structured, and personalized tutoring in Mathematics and Science for students in Grades 4–12, aligned with the Saskatchewan Curriculum, while supporting broader academic and language proficiency goals.
                 </p>
                 <p className="font-bold text-base text-[#2f2f2f] leading-relaxed">
-                  We offer a range of carefully designed programs from preschool through Grade 12, blending rigorous academics with Islamic values, creative exploration, and character development. Whether your child needs extra support, advanced challenge, or a nurturing first school experience — we have a place for them here.
+                  We offer specialized programs spanning Sunshine Program Math &amp; Science (Grades 4–8), Freshman/Sophomore (Grades 8–10), Junior/Senior (Grades 11–12), university-level tutoring, Top 10 Canadian university admission preparation, and ESL/IELTS examination preparation.
                 </p>
                 <p className="font-bold text-base text-[#2f2f2f] leading-relaxed">
-                  Our educators are not just teachers — they are mentors, coaches, and community builders who invest deeply in every student's growth. Small class sizes, personalised attention, and a warm environment set us apart.
+                  Our programs emphasize interactive, hands-on teaching methods with small-group learning to ensure focused instruction and individualized attention. Every student completes an intake assessment to identify priority learning areas — because we believe that truly personalized education is the key to measurable academic success.
                 </p>
               </div>
             </motion.div>
@@ -247,7 +194,7 @@ export default function AboutPage() {
                   className="font-bold text-sm text-[#e5c6ff] leading-relaxed"
                   style={{ fontFamily: 'var(--font-manrope)' }}
                 >
-                  To inspire a lifelong love of learning by delivering world-class education enriched with strong moral and Islamic values — shaping tomorrow's leaders today.
+                  To provide high-quality, structured, and personalized tutoring in Mathematics and Science for students in Grades 4–12, aligned with the Saskatchewan Curriculum, while supporting broader academic and language proficiency goals.
                 </p>
               </div>
               <div className="bg-[#1a84d2] border-4 border-black rounded-2xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
@@ -267,7 +214,7 @@ export default function AboutPage() {
                   className="font-bold text-sm text-[#86c8ef] leading-relaxed"
                   style={{ fontFamily: 'var(--font-manrope)' }}
                 >
-                  To be the most trusted educational partner for families — a place where every student discovers their potential and steps into the future with confidence and purpose.
+                  To become the leading tutoring and academic support provider in Regina, Saskatchewan, serving students who seek supplemental learning in Mathematics, Sciences, English language development, and post-secondary preparation.
                 </p>
               </div>
             </motion.div>
@@ -289,13 +236,13 @@ export default function AboutPage() {
               className="inline-block bg-[#6bb1ff] border-2 border-black px-4 py-1 font-black text-xs uppercase tracking-widest mb-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
-              Founder
+              Our Team
             </span>
             <h2
               className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-[#1a1a1a]"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
-              Meet the Founder
+              Meet Our Team
             </h2>
           </motion.div>
 
@@ -323,13 +270,13 @@ export default function AboutPage() {
                       className="font-black text-base text-[#1a1a1a] leading-none"
                       style={{ fontFamily: 'var(--font-space-grotesk)' }}
                     >
-                      Dr. Khalid Ansari
+                      Mind Masters Team
                     </p>
                     <p
                       className="font-bold text-xs text-[#483d00]"
                       style={{ fontFamily: 'var(--font-manrope)' }}
                     >
-                      Founder & Director
+                      Dedicated Educators
                     </p>
                   </div>
                 </div>
@@ -345,46 +292,46 @@ export default function AboutPage() {
               className="flex flex-col gap-5"
             >
               <div>
-                <p
-                  className="font-black text-xs uppercase tracking-widest mb-1"
-                  style={{ fontFamily: 'var(--font-space-grotesk)', color: '#8126cf' }}
-                >
-                  A Message from Our Founder
-                </p>
-                <h3
-                  className="text-3xl font-black text-[#1a1a1a] uppercase tracking-tight"
-                  style={{ fontFamily: 'var(--font-space-grotesk)' }}
-                >
-                  Building Futures,<br />One Student at a Time
-                </h3>
+              <p
+                className="font-black text-xs uppercase tracking-widest mb-1"
+                style={{ fontFamily: 'var(--font-space-grotesk)', color: '#8126cf' }}
+              >
+                A Message from Our Team
+              </p>
+              <h3
+                className="text-3xl font-black text-[#1a1a1a] uppercase tracking-tight"
+                style={{ fontFamily: 'var(--font-space-grotesk)' }}
+              >
+                Building Futures,<br />One Student at a Time
+              </h3>
               </div>
 
-              <div className="flex flex-col gap-4" style={{ fontFamily: 'var(--font-manrope)' }}>
-                <p className="font-bold text-base text-[#2f2f2f] leading-relaxed">
-                  "I started Mind Masters because I saw too many brilliant children slipping through the cracks of the traditional education system — not because they lacked ability, but because no one had taken the time to teach them in a way that resonated with them."
-                </p>
-                <p className="font-bold text-base text-[#2f2f2f] leading-relaxed">
-                  "With a background in educational psychology and over 15 years of teaching experience, I knew we could do better. Mind Masters was built on the principle that education should be joyful, rigorous, and deeply personal."
-                </p>
-                <p className="font-bold text-base text-[#2f2f2f] leading-relaxed">
-                  "Today, I am proud to lead a team of passionate educators who share this vision — and even prouder to see our students grow into confident, curious, and compassionate human beings."
-                </p>
-              </div>
+            <div className="flex flex-col gap-4" style={{ fontFamily: 'var(--font-manrope)' }}>
+              <p className="font-bold text-base text-[#2f2f2f] leading-relaxed">
+                "We started Mind Masters because we saw too many bright students struggling through the traditional education system — not because they lacked ability, but because they needed instruction tailored to their unique learning styles."
+              </p>
+              <p className="font-bold text-base text-[#2f2f2f] leading-relaxed">
+                "With experienced educators and a commitment to small-group, personalized instruction, Mind Masters was built on the principle that every student deserves focused attention, structured guidance, and the confidence to excel academically."
+              </p>
+              <p className="font-bold text-base text-[#2f2f2f] leading-relaxed">
+                "Today, we are proud to lead a team of passionate tutors who share this vision — and even prouder to see our students grow into confident, capable, and curious learners prepared for university and beyond."
+              </p>
+            </div>
 
-              <div className="flex flex-wrap gap-3">
-                <div className="bg-[#f5e8ff] border-2 border-[#c4b5fd] rounded-xl px-4 py-2 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-base text-[#8126cf]" style={{ fontVariationSettings: "'FILL' 1" }}>school</span>
-                  <span className="font-black text-xs text-[#4f0089]" style={{ fontFamily: 'var(--font-space-grotesk)' }}>PhD Education</span>
-                </div>
-                <div className="bg-[#e8f4ff] border-2 border-[#86c8ef] rounded-xl px-4 py-2 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-base text-[#1a84d2]" style={{ fontVariationSettings: "'FILL' 1" }}>workspace_premium</span>
-                  <span className="font-black text-xs text-[#003459]" style={{ fontFamily: 'var(--font-space-grotesk)' }}>15+ Years Teaching</span>
-                </div>
-                <div className="bg-[#fffbe8] border-2 border-[#fde68a] rounded-xl px-4 py-2 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-base text-[#6a5b00]" style={{ fontVariationSettings: "'FILL' 1" }}>mosque</span>
-                  <span className="font-black text-xs text-[#483d00]" style={{ fontFamily: 'var(--font-space-grotesk)' }}>Islamic Scholar</span>
-                </div>
+            <div className="flex flex-wrap gap-3">
+              <div className="bg-[#f5e8ff] border-2 border-[#c4b5fd] rounded-xl px-4 py-2 flex items-center gap-2">
+                <span className="material-symbols-outlined text-base text-[#8126cf]" style={{ fontVariationSettings: "'FILL' 1" }}>school</span>
+                <span className="font-black text-xs text-[#4f0089]" style={{ fontFamily: 'var(--font-space-grotesk)' }}>Experienced Educators</span>
               </div>
+              <div className="bg-[#e8f4ff] border-2 border-[#86c8ef] rounded-xl px-4 py-2 flex items-center gap-2">
+                <span className="material-symbols-outlined text-base text-[#1a84d2]" style={{ fontVariationSettings: "'FILL' 1" }}>workspace_premium</span>
+                <span className="font-black text-xs text-[#003459]" style={{ fontFamily: 'var(--font-space-grotesk)' }}>Saskatchewan Curriculum</span>
+              </div>
+              <div className="bg-[#fffbe8] border-2 border-[#fde68a] rounded-xl px-4 py-2 flex items-center gap-2">
+                <span className="material-symbols-outlined text-base text-[#6a5b00]" style={{ fontVariationSettings: "'FILL' 1" }}>group</span>
+                <span className="font-black text-xs text-[#483d00]" style={{ fontFamily: 'var(--font-space-grotesk)' }}>Small-Group Learning</span>
+              </div>
+            </div>
             </motion.div>
           </div>
         </div>
@@ -404,13 +351,13 @@ export default function AboutPage() {
               className="inline-block bg-[#8126cf] text-white border-2 border-black px-4 py-1 font-black text-xs uppercase tracking-widest mb-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
-              Our People
+              Our Educators
             </span>
             <h2
               className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-[#1a1a1a]"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
-              Meet the Team
+              Meet Our Instructors
             </h2>
             <p
               className="text-lg font-bold text-[#5b5b5b] mt-2 max-w-xl"
