@@ -1,12 +1,12 @@
 const notices = [
-  "🎉 Summer Robotics Camp 2024 — Registration Now Open!",
-  "📚 New State-of-the-Art VR Lab Launching Next Semester",
-  "🏆 Grade 8 Team Wins Regional Math Olympiad Gold!",
-  "🎨 Annual Art & Design Showcase — This Friday at 5PM",
-  "🚀 Apply Now for the 2024-25 Academic Year",
-  "📖 Library Extended Hours — Now Open Until 8PM Weekdays",
-  "🤖 AI Ethics Workshop — Register Before Seats Fill Up",
-  "🌍 Global Model UN Competition — Representing Mind Masters!",
+  "🚀 Enrollment Now Open — Grades 4–12, University & IELTS Prep",
+  "📝 Book Your Intake Assessment Today",
+  "💻 Virtual Tutoring via Zoom Now Available",
+  "🎓 Admission Prep for Canada's Top 10 Universities",
+  "🗣️ ESL & IELTS Preparation Classes Enrolling Now",
+  "👨‍👩‍👧‍👦 20% Discount for Families with 2+ Kids Enrolled",
+  "📐 Math & Science Tutoring for Grades 4–12",
+  "📍 Visit Us at 131 Woodward Ave, Regina, SK",
 ];
 
 export default function NoticeSection() {

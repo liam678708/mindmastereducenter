@@ -22,13 +22,13 @@ export default function Navbar() {
     href === '/' ? pathname === '/' : pathname.startsWith(href);
 
   return (
-    <header className='flex justify-between items-center px-6 md:px-8 py-2 w-full sticky top-0 z-50 bg-white border-b-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]'>
+    <header className='flex justify-between items-center px-6 md:px-8 py-2 w-full sticky top-0 z-50 bg-white border-b-4 border-black'>
       {/* Logo */}
       <Link href='/'>
         <Image
           src={logo}
           alt='Mind Masters Logo'
-          height={44}
+          height={60}
           className='w-auto'
           priority
         />
@@ -61,7 +61,7 @@ export default function Navbar() {
       <div className='flex items-center gap-4'>
         <Link
           href='/apply'
-          className={`brutalist-button font-black px-5 py-2 border-4 border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hidden md:inline-flex items-center transition-all ${
+          className={`brutalist-button font-black px-5 py-2 border-4 border-black rounded-xl hidden md:inline-flex items-center transition-all ${
             isActive('/apply')
               ? 'bg-black text-[#6bb1ff]'
               : 'bg-[#6bb1ff] text-black'
@@ -91,7 +91,7 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className='absolute top-full left-0 w-full bg-white border-b-4 border-black shadow-[0_4px_0px_0px_rgba(0,0,0,1)] flex flex-col md:hidden z-40'>
+        <div className='absolute top-full left-0 w-full bg-white border-b-4 border-black flex flex-col md:hidden z-40'>
           {navLinks.map((link) => {
             const active = isActive(link.href);
             return (
@@ -122,7 +122,7 @@ export default function Navbar() {
             <Link
               href='/apply'
               onClick={() => setMenuOpen(false)}
-              className={`brutalist-button inline-block font-black px-6 py-3 border-4 border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] ${
+              className={`brutalist-button inline-block font-black px-6 py-3 border-4 border-black rounded-xl ${
                 isActive('/apply')
                   ? 'bg-black text-[#6bb1ff]'
                   : 'bg-[#6bb1ff] text-black'

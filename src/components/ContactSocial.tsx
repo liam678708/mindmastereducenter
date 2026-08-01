@@ -148,7 +148,7 @@ export default function ContactSocial() {
             className='flex flex-col gap-6'
           >
             {/* Google Map */}
-            <div className='border-4 border-black rounded-2xl overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'>
+            <div className='rounded-2xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.1)]'>
               <iframe
                 src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.0258557125503!2d-104.63123062437032!3d50.477862371597446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1eee78c2a6f7%3A0x7e51ac0d2243e6a1!2s131%20Woodward%20Ave%2C%20Regina%2C%20SK%20S4R%203H5%2C%20Canada!5e0!3m2!1sen!2sbd!4v1776349364976!5m2!1sen!2sbd'
                 width='100%'
@@ -214,7 +214,7 @@ export default function ContactSocial() {
             className='flex flex-col gap-6'
           >
             {/* Contact form card */}
-            <div className='bg-white border-4 border-black rounded-2xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col gap-5'>
+            <div className='bg-white rounded-2xl p-8 shadow-[0_4px_24px_rgba(0,0,0,0.08)] flex flex-col gap-5'>
               <div>
                 <h3
                   className='text-2xl font-black uppercase tracking-tight mb-1'
@@ -318,7 +318,7 @@ export default function ContactSocial() {
                   <button
                     type='submit'
                     disabled={loading}
-                    className='brutalist-button w-full bg-[#8126cf] text-white font-black py-3.5 border-4 border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center gap-2 text-base disabled:opacity-60'
+                    className='brutalist-button w-full bg-[#8126cf] text-white font-black py-3.5 border-4 border-black rounded-xl flex items-center justify-center gap-2 text-base disabled:opacity-60'
                     style={{ fontFamily: 'var(--font-space-grotesk)' }}
                   >
                     {loading ? 'Sending...' : (
@@ -336,7 +336,7 @@ export default function ContactSocial() {
                   key={s.label}
                   whileHover={{ y: -4, transition: { duration: 0.18 } }}
                   whileTap={{ scale: 0.95 }}
-                  className={`${s.bg} border-2 border-black rounded-2xl p-4 flex flex-col items-center gap-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] cursor-pointer`}
+                  className={`${s.bg} rounded-2xl p-4 flex flex-col items-center gap-2 shadow-[0_2px_10px_rgba(0,0,0,0.08)] cursor-pointer`}
                 >
                   <span
                     className={`material-symbols-outlined text-3xl ${s.iconColor}`}

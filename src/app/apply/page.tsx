@@ -19,7 +19,7 @@ const programOptions: {
     id: 'math-science',
     label: 'School Success Program',
     icon: 'calculate',
-    desc: 'Sunshine (4-8), Freshman/Sophomore (8-10), Junior/Senior (11-12) · Math & Science',
+    desc: 'Sunshine (4-8), Freshman/Sophomore (8-10), Junior/Senior (11-12) · Math & Science · SK Curriculum',
     color: '#1a84d2',
     bg: '#e8f4ff',
     border: 'border-[#86c8ef]',
@@ -203,12 +203,12 @@ function ApplyForm() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
           >
-            <div className='bg-white border-4 border-black rounded-2xl p-8 md:p-10 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'>
+            <div className='bg-white rounded-2xl p-8 md:p-10 shadow-[0_4px_28px_rgba(0,0,0,0.1)]'>
               {sent ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className='bg-[#e8f4ff] border-4 border-[#1a84d2] rounded-2xl p-10 flex flex-col items-center gap-4 text-center'
+                  className='bg-[#e8f4ff] rounded-2xl p-10 flex flex-col items-center gap-4 text-center'
                 >
                   <span
                     className='material-symbols-outlined text-6xl text-[#1a84d2]'
@@ -235,7 +235,7 @@ function ApplyForm() {
                       setSent(false);
                       setForm(emptyForm);
                     }}
-                    className='brutalist-button bg-[#1a84d2] text-white font-black text-sm px-6 py-3 border-2 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] mt-2'
+                    className='brutalist-button bg-[#1a84d2] text-white font-black text-sm px-6 py-3 border-2 border-black rounded-xl mt-2'
                     style={{ fontFamily: 'var(--font-space-grotesk)' }}
                   >
                     Submit Another Application
@@ -269,7 +269,7 @@ function ApplyForm() {
                             onClick={() => set('program', opt.id)}
                             className={`flex items-start gap-3 p-4 rounded-2xl border-4 text-left transition-all ${
                               selected
-                                ? `border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]`
+                                ? `border-black`
                                 : `${opt.border} shadow-none hover:border-black`
                             }`}
                             style={{
@@ -364,7 +364,7 @@ function ApplyForm() {
                               key={opt}
                               className={`flex items-center gap-2 cursor-pointer rounded-xl border-2 px-3 py-2 transition-all ${
                                 checked
-                                  ? 'border-black bg-[#e8f4ff] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'
+                                  ? 'border-black bg-[#e8f4ff]'
                                   : 'border-[#e2e2e2] bg-[#f8f9fa] hover:border-black'
                               }`}
                             >
@@ -583,7 +583,7 @@ function ApplyForm() {
                   <button
                     type='submit'
                     disabled={loading || !form.program}
-                    className='brutalist-button bg-black text-white font-black py-4 border-4 border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(107,177,255,1)] flex items-center justify-center gap-2 text-base disabled:opacity-50'
+                    className='brutalist-button bg-black text-white font-black py-4 border-4 border-black rounded-xl flex items-center justify-center gap-2 text-base disabled:opacity-50'
                     style={{ fontFamily: 'var(--font-space-grotesk)' }}
                   >
                     {loading ? (

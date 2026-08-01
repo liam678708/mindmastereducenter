@@ -115,7 +115,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
           >
-            <div className='bg-white border-4 border-black rounded-2xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'>
+            <div className='bg-white rounded-2xl p-8 shadow-[0_4px_24px_rgba(0,0,0,0.08)]'>
               <h2
                 className='text-2xl font-black uppercase tracking-tight mb-1 text-[#1a1a1a]'
                 style={{ fontFamily: 'var(--font-space-grotesk)' }}
@@ -165,7 +165,7 @@ export default function ContactPage() {
                         message: '',
                       });
                     }}
-                    className='brutalist-button bg-[#1a84d2] text-white font-black text-sm px-6 py-2.5 border-2 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]'
+                    className='brutalist-button bg-[#1a84d2] text-white font-black text-sm px-6 py-2.5 border-2 border-black rounded-xl'
                     style={{ fontFamily: 'var(--font-space-grotesk)' }}
                   >
                     Send Another
@@ -276,7 +276,7 @@ export default function ContactPage() {
                   <button
                     type='submit'
                     disabled={loading}
-                    className='brutalist-button bg-[#8126cf] text-white font-black py-4 border-4 border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center gap-2 text-base disabled:opacity-60'
+                    className='brutalist-button bg-[#8126cf] text-white font-black py-4 border-4 border-black rounded-xl flex items-center justify-center gap-2 text-base disabled:opacity-60'
                     style={{ fontFamily: 'var(--font-space-grotesk)' }}
                   >
                     {loading ? (
@@ -355,7 +355,7 @@ export default function ContactPage() {
             </div>
 
             {/* Google Map */}
-            <div className='border-4 border-black rounded-2xl overflow-hidden shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex-grow min-h-[280px]'>
+            <div className='rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.1)] flex-grow min-h-[280px]'>
               <iframe
                 src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.0258557125503!2d-104.63123062437032!3d50.477862371597446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1eee78c2a6f7%3A0x7e51ac0d2243e6a1!2s131%20Woodward%20Ave%2C%20Regina%2C%20SK%20S4R%203H5%2C%20Canada!5e0!3m2!1sen!2sbd!4v1776349364976!5m2!1sen!2sbd'
                 width='100%'

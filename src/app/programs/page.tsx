@@ -8,7 +8,7 @@ const programs = [
     id: 'math-science',
     badge: 'Core Program',
     title: 'School Success Program',
-    subtitle: 'Mathematics & Science Tutoring — Grades 4-12',
+    subtitle: 'Math & Science — Grades 4-12',
     description: 'Mind Masters EduCenter\'s goal is to help our learners develop, study, and learn skills that will help them set up for academic success at the elementary and through secondary and tertiary levels of education. We provide top-quality, affordable, convenient tutoring programs customized to each learner\'s strengths and weaknesses and their best way of learning.',
     details: [
       { icon: 'school', label: 'Grades', value: 'Grade 4 – Grade 12' },
@@ -160,11 +160,11 @@ export default function ProgramsPage() {
                 key={prog.title}
                 variants={cardVariant}
                 whileHover={{ y: -6, transition: { duration: 0.2 } }}
-                className={`bg-white border-4 border-black rounded-2xl overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col`}
+                className={`bg-white rounded-2xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.08)] flex flex-col`}
               >
                 {/* Banner */}
                 <div
-                  className="px-6 py-6 flex items-center gap-4 border-b-4 border-black"
+                  className="px-6 py-6 flex items-center gap-4"
                   style={{ backgroundColor: prog.accentBg }}
                 >
                   <div
@@ -291,7 +291,7 @@ export default function ProgramsPage() {
                   <div className="flex flex-wrap gap-2 mt-auto pt-2">
                     <Link
                       href="/contact"
-                      className="brutalist-button font-black text-sm px-4 py-2.5 border-4 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] flex items-center gap-1.5"
+                      className="brutalist-button font-black text-sm px-4 py-2.5 border-4 border-black rounded-xl flex items-center gap-1.5"
                       style={{
                         fontFamily: 'var(--font-space-grotesk)',
                         backgroundColor: prog.accentBg,
@@ -308,7 +308,7 @@ export default function ProgramsPage() {
                     </Link>
                     <Link
                       href={`/apply?program=${prog.id}`}
-                      className="brutalist-button font-black text-sm px-4 py-2.5 border-4 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] flex items-center gap-1.5 text-white"
+                      className="brutalist-button font-black text-sm px-4 py-2.5 border-4 border-black rounded-xl flex items-center gap-1.5 text-white"
                       style={{
                         fontFamily: 'var(--font-space-grotesk)',
                         backgroundColor: prog.accentColor,
@@ -349,7 +349,7 @@ export default function ProgramsPage() {
           </div>
           <Link
             href="/contact"
-            className="brutalist-button bg-[#6bb1ff] text-black font-black text-lg px-10 py-4 border-4 border-[#6bb1ff] rounded-xl shadow-[6px_6px_0px_0px_rgba(107,255,143,0.4)] whitespace-nowrap"
+            className="brutalist-button bg-[#6bb1ff] text-black font-black text-lg px-10 py-4 border-4 border-[#6bb1ff] rounded-xl whitespace-nowrap"
             style={{ fontFamily: 'var(--font-space-grotesk)' }}
           >
             Contact Us →

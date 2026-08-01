@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, type Variants } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const badgeColors = [
@@ -59,7 +58,7 @@ export default function AdmissionSection() {
 
         {/* Animated JOIN US badge */}
         <div
-          className={`absolute top-10 left-10 w-24 h-24 border-4 border-black rotate-[-15deg] z-20 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center justify-center rounded-xl ${shaking ? 'badge-shake' : ''}`}
+          className={`absolute top-10 right-10 w-24 h-24 border-4 border-black rotate-[-15deg] z-20 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center justify-center rounded-xl ${shaking ? 'badge-shake' : ''}`}
           style={{ backgroundColor: badgeBg, transition: 'background-color 0.3s ease' }}
         >
           <span
@@ -76,14 +75,15 @@ export default function AdmissionSection() {
           </span>
         </div>
 
-        {/* Main image */}
-        <div className="relative z-10 w-full max-w-lg aspect-square border-4 border-black rounded-[2rem] overflow-hidden shadow-[10px_10px_0px_0px_rgba(0,0,0,0.15)]">
-          <Image
-            src="https://images.pexels.com/photos/5561460/pexels-photo-5561460.jpeg"
-            alt="Students engaging in admission process"
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
+        {/* Main video */}
+        <div className="relative z-10 w-full max-w-lg aspect-square border-4 border-black rounded-[2rem] overflow-hidden shadow-[10px_10px_0px_0px_rgba(0,0,0,0.15)] bg-black">
+          <video
+            src="/join-us.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
           />
         </div>
       </motion.div>
@@ -121,15 +121,15 @@ export default function AdmissionSection() {
             className="text-lg md:text-xl font-bold max-w-lg text-[#2f2f2f] mb-8 leading-relaxed"
             style={{ fontFamily: 'var(--font-manrope)' }}
           >
-            Ready to unleash your superpower? Enroll in Mind Masters and gain
-            access to a community of forward-thinkers, industry experts, and a
-            curriculum designed for the future.
+            Ready to start your academic journey? Enroll in Mind Masters and
+            gain access to experienced tutors, personalized learning plans, and
+            programs designed for measurable success.
           </p>
 
           <div className="flex flex-wrap gap-4 w-full">
             <Link
               href="/contact"
-              className="brutalist-button font-black text-xl px-8 py-4 border-4 border-black rounded-xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
+              className="brutalist-button font-black text-xl px-8 py-4 border-4 border-black rounded-xl"
               style={{
                 fontFamily: 'var(--font-space-grotesk)',
                 backgroundColor: badgeBg,

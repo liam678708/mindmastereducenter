@@ -78,12 +78,12 @@ export default function Programs() {
               className='text-xl font-bold mt-2 text-[#5b5b5b]'
               style={{ fontFamily: 'var(--font-manrope)' }}
             >
-              Top-quality tutoring customized to each learner&apos;s needs.
+              Top-quality, affordable tutoring customized to each learner&apos;s strengths.
             </p>
           </div>
           <Link
             href="/programs"
-            className='brutalist-button bg-black text-white font-black px-8 py-4 border-4 border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(107,177,255,1)] whitespace-nowrap'
+            className='brutalist-button bg-black text-white font-black px-8 py-4 border-4 border-black rounded-xl whitespace-nowrap'
             style={{ fontFamily: 'var(--font-space-grotesk)' }}
           >
             View All Programs
@@ -102,9 +102,9 @@ export default function Programs() {
               key={program.title}
               variants={cardVariant}
               whileHover={{ y: -6, transition: { duration: 0.2 } }}
-              className='bg-white border-4 border-black rounded overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col'
+              className='bg-white border border-black rounded overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex flex-col'
             >
-              <div className='h-48 border-b-4 border-black relative overflow-hidden flex items-center justify-center'
+              <div className='h-48 relative overflow-hidden flex items-center justify-center'
                 style={{ backgroundColor: program.accentBg }}
               >
                 <span
@@ -141,7 +141,7 @@ export default function Programs() {
                 </p>
                 <Link
                   href={`/apply?program=${program.title.toLowerCase().replace(/\s+/g, '-')}`}
-                  className={`brutalist-button mt-auto w-full text-center ${program.btnBg} font-black py-4 border-4 border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]`}
+                  className={`brutalist-button mt-auto w-full text-center ${program.btnBg} font-black py-4 border-4 border-black rounded-xl`}
                   style={{ fontFamily: 'var(--font-space-grotesk)' }}
                 >
                   Explore Program

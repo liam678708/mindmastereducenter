@@ -120,7 +120,7 @@ export default function AboutPage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/apply"
-                className="brutalist-button bg-[#6bb1ff] text-black font-black px-8 py-4 border-4 border-[#6bb1ff] rounded-xl shadow-[6px_6px_0px_0px_rgba(107,255,143,0.4)] text-base"
+                className="brutalist-button bg-[#6bb1ff] text-black font-black px-8 py-4 border-4 border-[#6bb1ff] rounded-xl text-base"
                 style={{ fontFamily: 'var(--font-space-grotesk)' }}
               >
                 Apply Now →
@@ -177,7 +177,7 @@ export default function AboutPage() {
 
             {/* Right visual */}
             <motion.div variants={fadeUp} className="flex flex-col gap-4">
-              <div className="bg-[#8126cf] border-4 border-black rounded-2xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+              <div className="bg-[#8126cf] rounded-2xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.15)]">
                 <span
                   className="material-symbols-outlined text-5xl text-white mb-4 block"
                   style={{ fontVariationSettings: "'FILL' 1" }}
@@ -197,7 +197,7 @@ export default function AboutPage() {
                   To provide high-quality, structured, and personalized tutoring in Mathematics and Science for students in Grades 4–12, aligned with the Saskatchewan Curriculum, while supporting broader academic and language proficiency goals.
                 </p>
               </div>
-              <div className="bg-[#1a84d2] border-4 border-black rounded-2xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+              <div className="bg-[#1a84d2] rounded-2xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.15)]">
                 <span
                   className="material-symbols-outlined text-5xl text-white mb-4 block"
                   style={{ fontVariationSettings: "'FILL' 1" }}
@@ -254,7 +254,7 @@ export default function AboutPage() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, ease: 'easeOut' }}
             >
-              <div className="relative border-4 border-black rounded-2xl overflow-hidden shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] aspect-[4/3]">
+              <div className="relative rounded-2xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.15)] aspect-[4/3]">
                 <Image
                   src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg"
                   alt="Founder of Mind Masters Edu Center"
@@ -265,7 +265,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 {/* Name badge over image */}
                 <div className="absolute bottom-5 left-5">
-                  <div className="bg-[#fcdf46] border-2 border-black rounded-xl px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <div className="bg-[#fcdf46] border-2 border-black rounded-xl px-4 py-2">
                     <p
                       className="font-black text-base text-[#1a1a1a] leading-none"
                       style={{ fontFamily: 'var(--font-space-grotesk)' }}
@@ -379,7 +379,7 @@ export default function AboutPage() {
                 key={member.name}
                 variants={fadeUp}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className={`bg-white border-4 border-black rounded-2xl overflow-hidden shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col`}
+                className={`bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex flex-col`}
               >
                 {/* Top accent */}
                 <div
@@ -448,7 +448,7 @@ export default function AboutPage() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/apply"
-              className="brutalist-button bg-[#6bb1ff] text-black font-black text-base px-8 py-4 border-4 border-[#6bb1ff] rounded-xl shadow-[6px_6px_0px_0px_rgba(107,255,143,0.4)] whitespace-nowrap"
+              className="brutalist-button bg-[#6bb1ff] text-black font-black text-base px-8 py-4 border-4 border-[#6bb1ff] rounded-xl whitespace-nowrap"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Apply Now →

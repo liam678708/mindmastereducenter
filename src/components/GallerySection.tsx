@@ -5,21 +5,21 @@ import { useRef } from 'react';
 import { motion, useAnimationFrame, useMotionValue } from 'framer-motion';
 
 const row1 = [
-  { src: 'https://images.pexels.com/photos/8421946/pexels-photo-8421946.jpeg?auto=compress&cs=tinysrgb&w=500', label: 'Innovation Lab',   tag: 'Tech',     tagBg: '#f5e8ff', tagColor: '#8126cf' },
-  { src: 'https://images.pexels.com/photos/5427868/pexels-photo-5427868.jpeg?auto=compress&cs=tinysrgb&w=500', label: 'Study Sessions',  tag: 'Academic', tagBg: '#e8f4ff', tagColor: '#1a84d2' },
-  { src: 'https://images.pexels.com/photos/6964688/pexels-photo-6964688.jpeg?auto=compress&cs=tinysrgb&w=500', label: 'Math Olympiad',   tag: 'Academic', tagBg: '#e8f4ff', tagColor: '#1a84d2' },
-  { src: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80',                            label: 'Young Explorers', tag: 'Kids',     tagBg: '#fffbe8', tagColor: '#6a5b00' },
-  { src: 'https://images.pexels.com/photos/7176476/pexels-photo-7176476.jpeg?auto=compress&cs=tinysrgb&w=500', label: 'Science Lab',     tag: 'Science',  tagBg: '#e8f4ff', tagColor: '#1a84d2' },
-  { src: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=500&q=80',                               label: 'Middle School',   tag: 'Growth',   tagBg: '#f5e8ff', tagColor: '#8126cf' },
+  { src: 'https://images.pexels.com/photos/8421946/pexels-photo-8421946.jpeg?auto=compress&cs=tinysrgb&w=500', label: 'Math Tutoring',      tag: 'Math',     tagBg: '#e8f4ff', tagColor: '#1a84d2' },
+  { src: 'https://images.pexels.com/photos/5427868/pexels-photo-5427868.jpeg?auto=compress&cs=tinysrgb&w=500', label: 'Study Sessions',     tag: 'Academic', tagBg: '#e8f4ff', tagColor: '#1a84d2' },
+  { src: 'https://images.pexels.com/photos/6964688/pexels-photo-6964688.jpeg?auto=compress&cs=tinysrgb&w=500', label: 'ESL & IELTS Prep',   tag: 'Language', tagBg: '#f5e8ff', tagColor: '#8126cf' },
+  { src: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80',                            label: 'Grades 4-8 Program', tag: 'Math & Science', tagBg: '#fffbe8', tagColor: '#6a5b00' },
+  { src: 'https://images.pexels.com/photos/7176476/pexels-photo-7176476.jpeg?auto=compress&cs=tinysrgb&w=500', label: 'Science Lab',        tag: 'Science',  tagBg: '#e8f4ff', tagColor: '#1a84d2' },
+  { src: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=500&q=80',                               label: 'Grades 9-12 Program', tag: 'Math & Science', tagBg: '#f5e8ff', tagColor: '#8126cf' },
 ];
 
 const row2 = [
-  { src: 'https://images.pexels.com/photos/4711732/pexels-photo-4711732.jpeg?auto=compress&cs=tinysrgb&w=500', label: 'Music & Arts',    tag: 'Creative', tagBg: '#fffbe8', tagColor: '#6a5b00' },
-  { src: 'https://images.pexels.com/photos/6624376/pexels-photo-6624376.jpeg?auto=compress&cs=tinysrgb&w=500', label: 'Mental Abacus',   tag: 'Math',     tagBg: '#e8f4ff', tagColor: '#1a84d2' },
-  { src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=80',                            label: 'Academy Leaders', tag: 'Leaders',  tagBg: '#f5e8ff', tagColor: '#8126cf' },
-  { src: 'https://images.pexels.com/photos/5561460/pexels-photo-5561460.jpeg?auto=compress&cs=tinysrgb&w=500', label: 'Campus Life',     tag: 'Life',     tagBg: '#fffbe8', tagColor: '#6a5b00' },
-  { src: 'https://images.pexels.com/photos/8421946/pexels-photo-8421946.jpeg?auto=compress&cs=tinysrgb&w=500', label: 'Robotics Club',   tag: 'Tech',     tagBg: '#f5e8ff', tagColor: '#8126cf' },
-  { src: 'https://images.pexels.com/photos/5427868/pexels-photo-5427868.jpeg?auto=compress&cs=tinysrgb&w=500', label: 'After School',    tag: 'Life',     tagBg: '#fffbe8', tagColor: '#6a5b00' },
+  { src: 'https://images.pexels.com/photos/4711732/pexels-photo-4711732.jpeg?auto=compress&cs=tinysrgb&w=500', label: 'Intake Assessment',    tag: 'Admissions', tagBg: '#fffbe8', tagColor: '#6a5b00' },
+  { src: 'https://images.pexels.com/photos/6624376/pexels-photo-6624376.jpeg?auto=compress&cs=tinysrgb&w=500', label: 'University Tutoring',  tag: 'STEM',       tagBg: '#e8f4ff', tagColor: '#1a84d2' },
+  { src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=80',                            label: 'Admission Prep',       tag: 'Top 10 Unis', tagBg: '#f5e8ff', tagColor: '#8126cf' },
+  { src: 'https://images.pexels.com/photos/5561460/pexels-photo-5561460.jpeg?auto=compress&cs=tinysrgb&w=500', label: 'After-School Tutoring', tag: 'Core Program', tagBg: '#fffbe8', tagColor: '#6a5b00' },
+  { src: 'https://images.pexels.com/photos/8421946/pexels-photo-8421946.jpeg?auto=compress&cs=tinysrgb&w=500', label: 'Virtual Zoom Classes', tag: 'Flexible',   tagBg: '#f5e8ff', tagColor: '#8126cf' },
+  { src: 'https://images.pexels.com/photos/5427868/pexels-photo-5427868.jpeg?auto=compress&cs=tinysrgb&w=500', label: 'Small Group Learning', tag: 'Personalized', tagBg: '#fffbe8', tagColor: '#6a5b00' },
 ];
 
 type GalleryItem = (typeof row1)[number];
@@ -96,7 +96,7 @@ function MarqueeRow({ items, direction = 1, speed = 0.6 }: { items: GalleryItem[
 
 export default function GallerySection() {
   return (
-    <section className="py-20 bg-white border-t-4 border-black overflow-hidden">
+    <section className="py-20 bg-white overflow-hidden">
 
       {/* Header */}
       <motion.div
@@ -124,7 +124,7 @@ export default function GallerySection() {
           className="text-lg font-bold text-[#5b5b5b] max-w-sm leading-relaxed"
           style={{ fontFamily: 'var(--font-manrope)' }}
         >
-          A glimpse into the vibrant energy, creative spaces, and unforgettable moments at our campus.
+          A glimpse into our programs, personalized instruction, and the Mind Masters learning experience.
         </p>
       </motion.div>
 

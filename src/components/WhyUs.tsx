@@ -11,8 +11,8 @@ const reasons = [
     shadowColor: 'rgba(0,106,45,0.25)',
     num: '01',
     numColor: 'text-[#86c8ef]',
-    title: 'Customized Learning',
-    body: 'Every student gets a unique AI-powered curriculum tailored to their pace and learning style.',
+    title: 'Personalized Learning',
+    body: 'Every student receives a customized learning plan tailored to their strengths and weaknesses.',
   },
   {
     icon: 'diversity_3',
@@ -22,19 +22,19 @@ const reasons = [
     shadowColor: 'rgba(129,38,207,0.25)',
     num: '02',
     numColor: 'text-[#c4b5fd]',
-    title: 'Mentorship First',
-    body: 'Learn from industry experts, not just textbooks. Real-world insights every single day.',
+    title: 'Experienced Tutors',
+    body: 'Learn from qualified educators who break down complex topics into easy, manageable steps.',
   },
   {
-    icon: 'rocket_launch',
+    icon: 'school',
     iconColor: 'text-[#6a5b00]',
     iconBg: 'bg-[#fffbe8]',
     borderColor: 'border-[#d4a800]',
     shadowColor: 'rgba(212,168,0,0.35)',
     num: '03',
     numColor: 'text-[#fde68a]',
-    title: 'Future-Proof Skills',
-    body: 'From coding to emotional intelligence, we prepare you for the next century of innovation.',
+    title: 'SK Curriculum Aligned',
+    body: 'All programs are aligned with the Saskatchewan Curriculum for seamless classroom support.',
   },
   {
     icon: 'shield',
@@ -44,30 +44,30 @@ const reasons = [
     shadowColor: 'rgba(0,106,45,0.25)',
     num: '04',
     numColor: 'text-[#86c8ef]',
-    title: 'Safe Environment',
-    body: 'A nurturing, inclusive space where every student feels seen, valued, and empowered to grow.',
+    title: 'Small-Group Learning',
+    body: 'Focused instruction with individualized attention — every student learns at their own pace.',
   },
   {
-    icon: 'emoji_events',
+    icon: 'trending_up',
     iconColor: 'text-[#8126cf]',
     iconBg: 'bg-[#f5e8ff]',
     borderColor: 'border-[#8126cf]',
     shadowColor: 'rgba(129,38,207,0.25)',
     num: '05',
     numColor: 'text-[#c4b5fd]',
-    title: 'Proven Results',
-    body: 'Consistent top performers in regional and national competitions across all disciplines.',
+    title: 'Measurable Progress',
+    body: 'Intake assessments identify priority areas and track academic growth over time.',
   },
   {
-    icon: 'groups',
+    icon: 'videocam',
     iconColor: 'text-[#6a5b00]',
     iconBg: 'bg-[#fffbe8]',
     borderColor: 'border-[#d4a800]',
     shadowColor: 'rgba(212,168,0,0.35)',
     num: '06',
     numColor: 'text-[#fde68a]',
-    title: 'Vibrant Community',
-    body: 'Events, clubs, and peer networks that build lifelong friendships and collaborative spirit.',
+    title: 'Flexible Learning Options',
+    body: 'In-person tutoring at our Regina centre or virtual Zoom sessions from anywhere.',
   },
 ];
 
@@ -83,7 +83,7 @@ const cardIn: Variants = {
 
 export default function WhyUs() {
   return (
-    <section id="why-us" className="py-24 px-6 md:px-8 bg-white border-t-4 border-black overflow-hidden">
+    <section id="why-us" className="py-24 px-6 md:px-8 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
@@ -108,12 +108,6 @@ export default function WhyUs() {
               Why Mind<br />Masters?
             </h2>
           </div>
-          <p
-            className="text-lg font-bold text-[#5b5b5b] max-w-sm leading-relaxed"
-            style={{ fontFamily: 'var(--font-manrope)' }}
-          >
-            Six reasons thousands of families choose us as their partner in learning.
-          </p>
         </motion.div>
 
         {/* 3-col × 2-row grid */}

@@ -4,14 +4,14 @@ import Link from 'next/link';
 import { motion, type Variants } from 'framer-motion';
 
 const programs = [
-  { icon: 'calculate',          label: 'Math Tutoring',       sub: 'Grades 4-12 + University',     bg: 'bg-white', iconColor: 'text-[#8126cf]', border: 'border-black' },
-  { icon: 'biotech',            label: 'Science Tutoring',    sub: 'Biology, Chemistry, Physics',  bg: 'bg-white', iconColor: 'text-[#1a84d2]', border: 'border-black' },
-  { icon: 'translate',          label: 'ESL Classes',         sub: 'English for newcomers',        bg: 'bg-white', iconColor: 'text-[#6a5b00]', border: 'border-black' },
-  { icon: 'menu_book',          label: 'IELTS Preparation',   sub: 'All four exam components',     bg: 'bg-white', iconColor: 'text-[#8126cf]', border: 'border-black' },
-  { icon: 'account_balance',    label: 'Uni Admission Prep',  sub: 'Top 10 Canadian universities', bg: 'bg-white', iconColor: 'text-[#1a84d2]', border: 'border-black' },
-  { icon: 'school',             label: 'University Tutoring', sub: 'Undergraduate STEM courses',   bg: 'bg-white', iconColor: 'text-[#6a5b00]', border: 'border-black' },
-  { icon: 'videocam',           label: 'Virtual Tutoring',    sub: 'Zoom sessions available',       bg: 'bg-white', iconColor: 'text-[#8126cf]', border: 'border-black' },
-  { icon: 'assignment',         label: 'Intake Assessments',  sub: 'Evaluate academic levels',      bg: 'bg-white', iconColor: 'text-[#1a84d2]', border: 'border-black' },
+  { icon: 'calculate',          label: 'Math Tutoring',       sub: 'Grades 4–12, SK Curriculum',      bg: 'bg-[#f5e8ff]', iconColor: 'text-[#8126cf]' },
+  { icon: 'biotech',            label: 'Science Tutoring',    sub: 'Biology, Chemistry, Physics',      bg: 'bg-[#e8f4ff]', iconColor: 'text-[#1a84d2]' },
+  { icon: 'translate',          label: 'ESL Studies',         sub: 'English for newcomers',            bg: 'bg-[#fffbe8]', iconColor: 'text-[#6a5b00]' },
+  { icon: 'menu_book',          label: 'IELTS Preparation',   sub: 'Reading, Writing, Listening, Speaking', bg: 'bg-[#f5e8ff]', iconColor: 'text-[#8126cf]' },
+  { icon: 'account_balance',    label: 'Admission Prep',      sub: 'Top 10 Canadian universities',     bg: 'bg-[#e8f4ff]', iconColor: 'text-[#1a84d2]' },
+  { icon: 'school',             label: 'University Tutoring', sub: 'Calculus, Linear Algebra, Stats', bg: 'bg-[#fffbe8]', iconColor: 'text-[#6a5b00]' },
+  { icon: 'videocam',           label: 'Virtual Classes',     sub: 'In-person & Zoom available',       bg: 'bg-[#f5e8ff]', iconColor: 'text-[#8126cf]' },
+  { icon: 'assignment',         label: 'Intake Assessments',  sub: 'Academic level evaluation',        bg: 'bg-[#e8f4ff]', iconColor: 'text-[#1a84d2]' },
 ];
 
 const fadeLeft: Variants = {
@@ -51,7 +51,7 @@ export default function AboutSection() {
   return (
     <section
       id='about'
-      className='py-24 px-6 md:px-8 bg-[#f1f1f1] border-b-4 border-black overflow-hidden'
+      className='py-24 px-6 md:px-8 bg-[#f1f1f1] overflow-hidden'
     >
       <div className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
         {/* LEFT: content */}
@@ -91,7 +91,7 @@ export default function AboutSection() {
           {/* Motto */}
           <div className='flex flex-wrap gap-5 mb-10'>
             <div
-              className='bg-white border-4 border-black px-6 py-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]'
+              className='bg-white rounded-xl px-6 py-4 shadow-[0_2px_12px_rgba(0,0,0,0.08)]'
             >
               <p
                 className='text-base font-black text-[#005f28]'
@@ -104,7 +104,7 @@ export default function AboutSection() {
 
           <Link
             href='/about'
-            className='brutalist-button inline-block bg-[#fcdf46] text-[#483d00] font-black px-8 py-4 border-4 border-black rounded-xl shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]'
+            className='brutalist-button inline-block bg-[#fcdf46] text-[#483d00] font-black px-8 py-4 border-4 border-black rounded-xl'
             style={{ fontFamily: 'var(--font-space-grotesk)' }}
           >
             Our Story
@@ -127,7 +127,7 @@ export default function AboutSection() {
             </p>
             <Link
               href='/programs'
-              className='brutalist-button bg-black text-white font-black text-sm px-5 py-2.5 border-4 border-black rounded-lg shadow-[3px_3px_0px_0px_rgba(107,177,255,1)]'
+              className='brutalist-button bg-black text-white font-black text-sm px-5 py-2.5 border-4 border-black rounded-lg'
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               View All Programs
@@ -146,7 +146,7 @@ export default function AboutSection() {
                 key={prog.label}
                 variants={cardIn}
                 whileHover={{ y: -4, transition: { duration: 0.18 } }}
-                className={`${prog.bg} border-2 ${prog.border} rounded-xl p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] cursor-pointer`}
+                className={`${prog.bg} border border-black rounded-xl p-5 shadow-[0_2px_10px_rgba(0,0,0,0.06)] cursor-pointer`}
               >
                 <span
                   className={`material-symbols-outlined text-4xl ${prog.iconColor} block mb-3`}

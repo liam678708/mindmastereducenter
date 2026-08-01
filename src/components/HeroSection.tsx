@@ -109,7 +109,7 @@ export default function HeroSection() {
   const current = heroData[currentIndex];
 
   return (
-    <section className='grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100vh-72px)] border-b-4 border-black'>
+    <section className='grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100vh-72px)]'>
       {/* ════════════════ LEFT ════════════════ */}
       <motion.div
         variants={leftContainer}
@@ -147,7 +147,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               exit={{ opacity: 0, y: -18, filter: 'blur(10px)' }}
               transition={{ duration: 0.38, ease: 'easeOut' }}
-              className='min-h-[1.8em] flex items-end pb-3 lg:pb-4'
+              className='min-h-[1.2em] flex items-end pb-3 lg:pb-4 text-2xl md:text-4xl'
             >
               {current.prefix}
             </motion.span>
@@ -179,14 +179,14 @@ export default function HeroSection() {
         >
           <Link
             href='#contact'
-            className='brutalist-button bg-[#8126cf] text-white font-black text-xl px-8 py-4 border-4 border-black rounded-xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] active:translate-y-0 active:translate-x-1 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all'
+            className='brutalist-button bg-[#8126cf] text-white font-black text-xl px-8 py-4 border-4 border-black rounded-xl transition-all'
             style={{ fontFamily: 'var(--font-space-grotesk)' }}
           >
             Apply Now
           </Link>
           <Link
             href='#contact'
-            className='brutalist-button bg-[#fcdf46] text-[#483d00] font-black text-xl px-8 py-4 border-4 border-black rounded-xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] active:translate-y-0 active:translate-x-1 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all'
+            className='brutalist-button bg-[#fcdf46] text-[#483d00] font-black text-xl px-8 py-4 border-4 border-black rounded-xl transition-all'
             style={{ fontFamily: 'var(--font-space-grotesk)' }}
           >
             Book Appointment
@@ -283,24 +283,9 @@ export default function HeroSection() {
             className='font-black text-center text-xs uppercase text-[#483d00] leading-tight'
             style={{ fontFamily: 'var(--font-space-grotesk)' }}
           >
-            Learn with
+            Mastering
             <br />
-            Confidence
-          </span>
-        </motion.div>
-
-        {/* Sticker 2: floating purple star */}
-        <motion.div
-          style={{ x: sStX, y: sStY }}
-          className='absolute bottom-10 left-6 w-20 h-20 md:w-24 md:h-24 bg-[#8126cf] border-4 border-black hero-sticker-2 z-20 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center cursor-pointer'
-          whileHover={{ scale: 1.15, rotate: 15 }}
-          transition={{ type: 'spring', stiffness: 300 }}
-        >
-          <span
-            className='material-symbols-outlined text-4xl text-white'
-            style={{ fontVariationSettings: "'FILL' 1" }}
-          >
-            star
+            Minds
           </span>
         </motion.div>
 

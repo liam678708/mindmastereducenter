@@ -17,8 +17,8 @@ const programs = [
     iconBg: 'bg-[#e8f4ff]',
     iconColor: 'text-[#1a84d2]',
     title: 'School Success Program',
-    subtitle: 'Mathematics & Science — Grades 4-12',
-    overview: 'Sunshine Program (Grades 4-8), Freshman/Sophomore Math & Science (Grades 8-10), and Junior/Senior Math & Science (Grades 11-12). Saskatchewan Curriculum aligned with small-group, personalized instruction.',
+    subtitle: 'Math & Science — Grades 4–12',
+    overview: 'Sunshine Program (Grades 4–8), Freshman/Sophomore (Grades 8–10), and Junior/Senior (Grades 11–12). Saskatchewan Curriculum aligned with small-group, personalized instruction. In-person & Zoom available.',
     details: [
       { icon: 'school', label: 'Grades', value: 'Grade 4 – Grade 12' },
       { icon: 'payments', label: 'Pricing', value: '$35/hr or $150/mo (8 sessions)' },
@@ -47,7 +47,7 @@ const programs = [
     iconColor: 'text-[#6a5b00]',
     title: 'University Prep & Tutoring',
     subtitle: 'Undergraduate STEM & Admission Prep',
-    overview: 'University-level tutoring in Calculus, Linear Algebra, Statistics, Physics, Chemistry, and Biology. Plus Top 10 Canadian Universities admission preparation with dedicated mentorship and application guidance.',
+    overview: 'University-level tutoring in Calculus, Linear Algebra, Statistics, Physics, Chemistry, and Biology. Plus Top 10 Canadian Universities admission preparation with dedicated mentorship and application guidance. In-person & Zoom available.',
     details: [
       { icon: 'school', label: 'Level', value: 'Pre-University & University' },
       { icon: 'payments', label: 'Pricing', value: '$35/hr or $150/mo (8 sessions)' },
@@ -76,7 +76,7 @@ const programs = [
     iconColor: 'text-[#8126cf]',
     title: 'ESL & IELTS Preparation',
     subtitle: 'English Language & Exam Preparation',
-    overview: 'ESL studies for newcomers and comprehensive IELTS exam preparation covering all four components: Reading, Writing, Listening, and Speaking. Personalized feedback, speaking practice, and authentic study materials.',
+    overview: 'ESL studies for newcomers and comprehensive IELTS exam preparation covering all four components: Reading, Writing, Listening, and Speaking. Personalized feedback, speaking practice, and authentic study materials. In-person & Zoom available.',
     details: [
       { icon: 'translate', label: 'Level', value: 'All levels welcome' },
       { icon: 'payments', label: 'Pricing', value: 'Contact for pricing' },
@@ -122,7 +122,7 @@ export default function FeaturedPrograms() {
   };
 
   return (
-    <section className="py-24 px-6 md:px-8 bg-[#f1f1f1] border-t-4 border-black overflow-hidden relative">
+    <section className="py-24 px-6 md:px-8 bg-[#f1f1f1] overflow-hidden relative">
       <div className="max-w-7xl mx-auto overflow-visible lg:overflow-hidden px-1">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
@@ -146,18 +146,12 @@ export default function FeaturedPrograms() {
             </h2>
           </div>
           <div className="flex flex-col items-start md:items-end gap-6">
-            <p
-              className="text-lg font-bold text-[#5b5b5b] max-w-sm leading-relaxed"
-              style={{ fontFamily: 'var(--font-manrope)' }}
-            >
-              Top-quality, affordable tutoring programs customized to each learner&apos;s strengths — in-person or via Zoom.
-            </p>
             {/* Navigation Controls */}
             <div className="flex gap-3 mt-auto">
               <button 
                 onClick={prevSlide} 
                 disabled={currentIndex === 0} 
-                className="w-12 h-12 border-4 border-black rounded-xl bg-white shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-100 transition-colors"
+                className="w-12 h-12 border-4 border-black rounded-xl bg-white flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-100 transition-colors"
                 aria-label="Previous Program"
               >
                 <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>arrow_back</span>
@@ -165,7 +159,7 @@ export default function FeaturedPrograms() {
               <button 
                 onClick={nextSlide} 
                 disabled={currentIndex >= maxIndex} 
-                className="w-12 h-12 border-4 border-black rounded-xl bg-[#1a84d2] text-white shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#125d93] transition-colors"
+                className="w-12 h-12 border-4 border-black rounded-xl bg-[#1a84d2] text-white flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#125d93] transition-colors"
                 aria-label="Next Program"
               >
                 <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>arrow_forward</span>
@@ -183,11 +177,11 @@ export default function FeaturedPrograms() {
             {programs.map((prog) => (
               <div
                 key={prog.title}
-                className="w-[calc(100%-0.5rem)] lg:w-[calc(50%-1.25rem)] flex-shrink-0 bg-white border-4 border-black rounded-2xl overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col"
+                className="w-[calc(100%-0.5rem)] lg:w-[calc(50%-1.25rem)] flex-shrink-0 bg-white rounded-2xl overflow-hidden border border-black shadow-[0_4px_24px_rgba(0,0,0,0.08)] flex flex-col"
               >
                 {/* Colored banner */}
                 <div
-                  className="px-6 py-6 flex items-center gap-4 border-b-4 border-black flex-shrink-0"
+                  className="px-6 py-6 flex items-center gap-4 flex-shrink-0"
                   style={{ backgroundColor: prog.accentBg }}
                 >
                   <div
@@ -225,21 +219,6 @@ export default function FeaturedPrograms() {
 
                 {/* Content */}
                 <div className="p-7 flex flex-col gap-5 flex-grow">
-                  <div>
-                    <p
-                      className="font-bold text-xs uppercase tracking-widest mb-1"
-                      style={{ fontFamily: 'var(--font-space-grotesk)', color: prog.accentColor }}
-                    >
-                      {prog.subtitle}
-                    </p>
-                    <h3
-                      className="text-2xl md:text-3xl font-black text-[#1a1a1a] leading-tight"
-                      style={{ fontFamily: 'var(--font-space-grotesk)' }}
-                    >
-                      {prog.title}
-                    </h3>
-                  </div>
-
                   <p
                     className="font-bold text-sm text-[#5b5b5b] leading-relaxed flex-grow"
                     style={{ fontFamily: 'var(--font-manrope)' }}
@@ -309,7 +288,7 @@ export default function FeaturedPrograms() {
                   <div className="flex flex-wrap items-center justify-between gap-3 mt-auto pt-2">
                     <Link
                       href={`/apply?program=${prog.id}`}
-                      className="brutalist-button font-black text-sm px-6 py-3 border-4 border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center gap-2"
+                      className="brutalist-button font-black text-sm px-6 py-3 border-4 border-black rounded-xl flex items-center gap-2"
                       style={{
                         fontFamily: 'var(--font-space-grotesk)',
                         backgroundColor: prog.accentColor,

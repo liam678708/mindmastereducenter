@@ -28,7 +28,7 @@ export default function Footer() {
           className="font-extrabold uppercase mb-8 text-sm leading-relaxed"
           style={{ fontFamily: "var(--font-manrope)" }}
         >
-          Mastering Minds. Shaping Futures.
+          Learn with Confidence. Achieve with Excellence.
         </p>
         <div className="flex gap-4">
           <a
@@ -102,7 +102,7 @@ export default function Footer() {
           </p>
           <Link
             href="/apply"
-            className="brutalist-button inline-block mt-3 bg-black text-[#fcdf46] font-black text-xs px-4 py-2 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+            className="brutalist-button inline-block mt-3 bg-black text-[#fcdf46] font-black text-xs px-4 py-2 border-2 border-black rounded-lg"
             style={{ fontFamily: "var(--font-space-grotesk)" }}
           >
             Apply Now

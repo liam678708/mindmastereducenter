@@ -113,7 +113,7 @@ export default function Schedule() {
   return (
     <section
       id="schedule"
-      className="py-24 px-6 md:px-8 bg-[#f8f9fa] border-t-4 border-black overflow-hidden"
+      className="py-24 px-6 md:px-8 bg-[#f8f9fa] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
 
@@ -130,13 +130,13 @@ export default function Schedule() {
               className="inline-block bg-[#6bb1ff] border-2 border-black px-4 py-1 font-black text-xs uppercase tracking-widest mb-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
-              2024 – 2025
+              2026 – 2027
             </span>
             <h2
               className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
-              Adventure<br />Schedule
+              Academic<br />Calendar
             </h2>
             <p
               className="text-base font-bold text-[#5b5b5b] mt-3"
@@ -155,7 +155,7 @@ export default function Schedule() {
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
         >
-          <div className="bg-white border-4 border-black rounded-2xl shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-[0_4px_24px_rgba(0,0,0,0.1)] overflow-hidden">
             <div className="mm-calendar-wrapper p-4 md:p-6 min-h-[700px]">
               {eventsLoading ? (
                 <div className="flex items-center justify-center h-[700px]">
@@ -216,7 +216,7 @@ export default function Schedule() {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
             onClick={(e) => e.stopPropagation()}
-            className="bg-white border-4 border-black rounded-2xl shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] max-w-md w-full p-8 relative"
+            className="bg-white rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.2)] max-w-md w-full p-8 relative"
           >
             <div
               className="absolute top-0 left-0 right-0 h-2 rounded-t-xl"

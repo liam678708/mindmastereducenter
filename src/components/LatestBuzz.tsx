@@ -82,7 +82,7 @@ export default function LatestBuzz() {
               </p>
               <Link
                 href={`/news/${item.slug}`}
-                className={`brutalist-button ${item.btnBg} ${item.btnText} font-black text-sm px-5 py-2.5 border-2 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] self-start`}
+                className={`brutalist-button ${item.btnBg} ${item.btnText} font-black text-sm px-5 py-2.5 border-2 border-black rounded-xl self-start`}
                 style={{ fontFamily: 'var(--font-space-grotesk)' }}
               >
                 Read More →
